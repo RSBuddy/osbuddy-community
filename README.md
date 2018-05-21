@@ -9,4 +9,4 @@ This is an initial commit, please check back shortly.
 ## Creating a plugin
 This is an initial commit, please check back shortly.
 ## Contributions
-We will accept merge requests for contributions that match our[LICENSE](https://github.com/rsbuddy/osbuddy-community/LICENSE), and our contribution guidelines that will be made available here shortly.
+We will accept merge requests for contributions that match our [LICENSE](https://github.com/rsbuddy/osbuddy-community/LICENSE), and our contribution guidelines that will be made available here shortly.
