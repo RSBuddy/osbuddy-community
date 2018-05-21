@@ -30,6 +30,8 @@
 
 package com.rsbuddy.osrs.game.ui;
 
+import com.rsbuddy.osrs.content.ui.GameTab;
+
 import javax.inject.Singleton;
 import java.awt.Rectangle;
 import java.util.List;
@@ -58,4 +60,7 @@ public interface Interfaces {
     boolean valid(final int widgetId);
 
     boolean visible(final int group, final int index);
+
+    GameTab currentGameTab();
+
 }
