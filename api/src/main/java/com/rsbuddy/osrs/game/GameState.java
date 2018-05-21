@@ -41,12 +41,11 @@ public enum GameState {
     BUILDING_MAP(25),
     RECONNECTING(40),
     TRANSFERRING(45),
-    CRASHED(1000)
-    ;
+    CRASHED(1000);
+
+    public final int id;
 
     GameState(int id) {
         this.id = id;
     }
-
-    public final int id;
 }

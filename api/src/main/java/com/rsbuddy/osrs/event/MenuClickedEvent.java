@@ -37,11 +37,11 @@ public class MenuClickedEvent {
 
     private final int actionParam0;
     private final int actionParam1;
-    private int typeId;
     private final int targetId;
     private final int x;
     private final int y;
     private final String action;
+    private int typeId;
     private String option;
 
     private boolean consumed = false;
@@ -99,6 +99,7 @@ public class MenuClickedEvent {
     public int actionParam0() {
         return actionParam0;
     }
+
     public int actionParam1() {
         return actionParam1;
     }

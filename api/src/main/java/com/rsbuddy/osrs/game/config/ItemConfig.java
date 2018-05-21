@@ -34,12 +34,17 @@ public interface ItemConfig {
     int id();
 
     String name();
+
     String[] groundActions();
+
     String[] inventoryActions();
 
     boolean members();
+
     boolean stackable();
+
     boolean transferable();
+
     boolean placeholder();
 
     int price();
@@ -53,8 +58,11 @@ public interface ItemConfig {
     boolean noted();
 
     int karamjaSell();
+
     int karamjaSell(int amount);
+
     int karamjaTotal(int amount);
+
     int karamjaAverage(int amount);
 
 }

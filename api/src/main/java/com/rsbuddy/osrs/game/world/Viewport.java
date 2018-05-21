@@ -37,15 +37,26 @@ import java.awt.geom.Ellipse2D;
 
 public interface Viewport {
     boolean onScreen(Locatable tile);
+
     boolean onScreen(Point p);
+
     boolean onMinimap(Locatable tile);
+
     Point minimap(Locatable tile);
+
     Point project(Locatable tile);
+
     Point project(Locatable tile, double height);
+
     Point project(Locatable tile, double deltaX, double deltaY, double deltaZ);
+
     Polygon tileQuadAt(Locatable tile);
+
     Polygon tileQuadAt(Locatable tile, double height);
+
     Point worldToScreen(int x, int y, int floor);
+
     Rectangle bounds();
+
     Ellipse2D minimapBounds();
 }

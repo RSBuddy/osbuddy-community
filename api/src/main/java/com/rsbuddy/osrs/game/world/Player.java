@@ -35,15 +35,25 @@ import java.util.Collection;
 
 public interface Player extends Actor {
     String name();
+
     int level();
+
     int appearance(int index);
+
     int[] rawAppearance();
+
     int[] appearance();
+
     boolean appearanceContains(int... ids);
+
     boolean appearanceContains(Collection<Integer> ids);
+
     void noAppearance();
+
     void lookupMaxHealth();
+
     int index();
+
     int regionId();
 
     interface Equipment {

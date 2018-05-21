@@ -32,5 +32,6 @@ package com.rsbuddy.osrs.game.chat;
 
 public interface ChatLine {
     String name();
+
     String message();
 }

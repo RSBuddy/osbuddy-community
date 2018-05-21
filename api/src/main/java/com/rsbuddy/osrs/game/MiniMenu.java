@@ -31,26 +31,41 @@
 package com.rsbuddy.osrs.game;
 
 import javax.inject.Singleton;
-import java.awt.*;
+import java.awt.Rectangle;
 import java.util.EnumSet;
 
 @Singleton
 public interface MiniMenu {
     boolean open();
+
     int x();
+
     int y();
+
     int width();
+
     int height();
+
     int count();
+
     Rectangle bounds();
+
     String[] options();
+
     String[] actions();
+
     String[] entries();
+
     String hoverAction();
+
     String hoverOption();
+
     String hoverText();
+
     MiniMenuEntry<?> hoverTarget();
+
     MiniMenuEntry<?> firstTarget(EnumSet<MiniMenuEntry.Type> types);
+
     MiniMenuEntry<?>[] targets();
 
     /**

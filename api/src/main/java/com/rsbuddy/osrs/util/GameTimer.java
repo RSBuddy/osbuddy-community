@@ -67,7 +67,7 @@ public class GameTimer {
                 public void run() {
                     try {
                         if (game.state() == GameState.LOGGED_IN || !requireLogin) {
-                            if (!callable.call() && running){
+                            if (!callable.call() && running) {
                                 cancel();
                             }
                         }

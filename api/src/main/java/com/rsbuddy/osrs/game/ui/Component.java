@@ -40,10 +40,13 @@ public interface Component {
     boolean containsAction(String... phrases);
 
     void addAction(String action);
+
     void addActionFirst(String action);
+
     void addActionLast(String action);
 
     void setWidth(int width);
+
     void setHeight(int height);
 
     /**
@@ -80,8 +83,8 @@ public interface Component {
 
     /**
      * Gets the border thickness of this component
-     * 
-     * @return the thickness of the border on this component 
+     *
+     * @return the thickness of the border on this component
      */
     int borderThickness();
 
@@ -183,7 +186,7 @@ public interface Component {
      * possible. By default it is just the bounds with a 1 pixel margin
      * in all directions.
      *
-     * @return  the interacting bounds.
+     * @return the interacting bounds.
      */
     Rectangle interactingArea();
 
@@ -191,9 +194,9 @@ public interface Component {
      * Determines if the provided point is contained within the interacting
      * region of this component.
      *
-     * @param point     the point to check
-     * @return          <tt>true</tt> if the point is contained by the
-     *                  component.
+     * @param point the point to check
+     * @return <tt>true</tt> if the point is contained by the
+     * component.
      */
     boolean contains(final Point point);
 
@@ -228,8 +231,8 @@ public interface Component {
     /**
      * Gets the child of this component with the provided id
      *
-     * @param id    the id to look for
-     * @return      the child component
+     * @param id the id to look for
+     * @return the child component
      */
     Component child(int id);
 
@@ -245,7 +248,7 @@ public interface Component {
     /**
      * Gets the parent of this component, the right way.
      *
-     * @return  the parent component, or null
+     * @return the parent component, or null
      */
     Component parent();
 
@@ -272,7 +275,7 @@ public interface Component {
      * component.
      *
      * @return The array of ids for the component inventory,
-     *         or new int[0] if no inventory present.
+     * or new int[0] if no inventory present.
      */
     int[] inventoryIds();
 
@@ -281,23 +284,23 @@ public interface Component {
      * component.
      *
      * @return The array of stacks for the component inventory,
-     *         or new int[0] if no inventory present.
+     * or new int[0] if no inventory present.
      */
     int[] inventoryStacks();
 
     /**
      * Gets the parent id of this component.
      *
-     * @return  the parent id of the component, -1 if the
-     *          component is null.
+     * @return the parent id of the component, -1 if the
+     * component is null.
      */
     int parentId();
 
     /**
      * Gets the id of this component.
      *
-     * @return  the  id of the component, -1 if the
-     *          component is null.
+     * @return the  id of the component, -1 if the
+     * component is null.
      */
     int id();
 
@@ -308,8 +311,8 @@ public interface Component {
     /**
      * Gets the child id of this component.
      *
-     * @return  the child id of the component, -1 if the
-     *          component is null.
+     * @return the child id of the component, -1 if the
+     * component is null.
      */
     int childId();
 
@@ -330,14 +333,14 @@ public interface Component {
     /**
      * Draws the bounds of the component.
      *
-     * @param g     the graphics object to use when drawing
+     * @param g the graphics object to use when drawing
      */
     void outline(Graphics g);
 
     /**
      * Fills the entire bounds of the component.
      *
-     * @param g     the graphics object to use
+     * @param g the graphics object to use
      */
     void fill(Graphics g);
 

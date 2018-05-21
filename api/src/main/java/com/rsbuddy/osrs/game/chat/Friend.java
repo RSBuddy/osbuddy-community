@@ -32,5 +32,6 @@ package com.rsbuddy.osrs.game.chat;
 
 public interface Friend extends PlayerData {
     int rank();
+
     int world();
 }

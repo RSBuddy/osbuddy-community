@@ -42,6 +42,7 @@ public class Tile implements Locatable {
 
     @SerializedName("floor")
     private final int floor;
+    private Tile lastApplied = null;
 
     public Tile(int x, int y, int floor) {
         this.x = x;
@@ -68,8 +69,6 @@ public class Tile implements Locatable {
     public Tile location() {
         return this;
     }
-
-    private Tile lastApplied = null;
 
     public Tile apply(int angle) {
         /*

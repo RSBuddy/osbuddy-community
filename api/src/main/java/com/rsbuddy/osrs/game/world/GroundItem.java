@@ -30,12 +30,16 @@
 
 package com.rsbuddy.osrs.game.world;
 
-import java.awt.*;
+import java.awt.Point;
 
 public interface GroundItem {
     Tile location();
+
     String name();
+
     int id();
+
     int stackSize();
+
     Point screenPoint();
 }

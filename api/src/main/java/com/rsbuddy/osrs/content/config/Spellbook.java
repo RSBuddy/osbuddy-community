@@ -32,9 +32,9 @@ package com.rsbuddy.osrs.content.config;
 
 public enum Spellbook {
 
-        STANDARD,
-        ANCIENT,
-        LUNAR,
-        NECROMANCY
+    STANDARD,
+    ANCIENT,
+    LUNAR,
+    NECROMANCY
 
 }

@@ -37,10 +37,16 @@ public interface GroundItems {
     int MAP_RADIUS = 26;
 
     Collection<GroundItem> loaded();
+
     Collection<GroundItem> loaded(Predicate<GroundItem> predicate);
+
     Collection<GroundItem> loadedById(Predicate<Integer> predicate);
+
     Collection<GroundItem> loaded(Predicate<GroundItem> predicate, int radius);
+
     Collection<GroundItem> loadedById(Predicate<Integer> predicate, int radius);
+
     GroundItem itemAt(int id, int x, int y);
+
     boolean itemExistsAt(int id, Tile tile);
 }

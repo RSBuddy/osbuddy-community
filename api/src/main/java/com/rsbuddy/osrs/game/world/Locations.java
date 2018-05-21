@@ -35,7 +35,7 @@ import java.util.EnumSet;
 
 public interface Locations {
 
-	Predicate<Location> ALL = gameObject -> true;
+    Predicate<Location> ALL = gameObject -> true;
 
     int MAP_RADIUS = 20;
 
@@ -54,10 +54,10 @@ public interface Locations {
     /**
      * Get the loaded objects within a radius. We do this for efficiency's sake.
      *
-     * @param types The Location types
+     * @param types     The Location types
      * @param predicate The condition
-     * @param radius The radius to search
-     * */
+     * @param radius    The radius to search
+     */
 
     Collection<Location> loaded(EnumSet<Location.Type> types, Predicate<Location> predicate, int radius);
 
@@ -66,9 +66,9 @@ public interface Locations {
     /**
      * Get the loaded objects within the minimap region.
      *
-     * @param types The Location types
+     * @param types     The Location types
      * @param predicate The condition
-     * */
+     */
 
     Collection<Location> loaded(EnumSet<Location.Type> types, Predicate<Location> predicate);
 
@@ -80,7 +80,7 @@ public interface Locations {
      * Get the loaded objects within the minimap region.
      *
      * @param predicate The condition
-     * */
+     */
 
     Collection<Location> loaded(Predicate<Location> predicate);
 
@@ -90,7 +90,7 @@ public interface Locations {
      * Get the loaded objects within the minimap region.
      *
      * @param types The Location types
-     * */
+     */
 
     Collection<Location> loaded(EnumSet<Location.Type> types);
 
@@ -118,7 +118,7 @@ public interface Locations {
 
     /**
      * Get the loaded objects within the minimap region.
-     * */
+     */
 
     Collection<Location> loaded();
 }

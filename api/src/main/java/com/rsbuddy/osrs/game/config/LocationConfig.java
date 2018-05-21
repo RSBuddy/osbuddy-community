@@ -31,8 +31,11 @@
 package com.rsbuddy.osrs.game.config;
 
 public interface LocationConfig {
-	String name();
-	String[] actions();
+    String name();
+
+    String[] actions();
+
     int[] multilocIds();
+
     LocationConfig multiloc();
 }

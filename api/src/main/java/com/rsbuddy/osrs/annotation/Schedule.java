@@ -36,5 +36,6 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Schedule {
     int value() default 0; // milliseconds
+
     boolean requireLoggedIn() default true;
 }

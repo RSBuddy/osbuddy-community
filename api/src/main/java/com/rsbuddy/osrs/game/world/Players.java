@@ -34,7 +34,10 @@ import java.util.Collection;
 
 public interface Players {
     Collection<Player> loaded(Predicate<Player> predicate);
+
     Collection<Player> loadedByName(Predicate<String> predicate);
+
     Collection<Player> loaded();
+
     Player local();
 }

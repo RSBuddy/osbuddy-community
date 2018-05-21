@@ -60,15 +60,13 @@ public class Bank {
 
     private final Interfaces interfaces;
     private final Inventories inventories;
-
+    private boolean open = false;
+    private long lastOpenCheck = 0;
     @Inject
     public Bank(Inventories inventories, Interfaces interfaces) {
         this.inventories = inventories;
         this.interfaces = interfaces;
     }
-
-    private boolean open = false;
-    private long lastOpenCheck = 0;
 
     public boolean open() {
         final long millis = System.currentTimeMillis();

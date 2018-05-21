@@ -31,62 +31,63 @@
 package com.rsbuddy.osrs.content.config;
 
 public enum Skill {
-	ATTACK("Attack", 0),
-	DEFENCE("Defence", 1),
-	STRENGTH("Strength", 2),
-	HITPOINTS("Hitpoints", 3),
-	RANGED("Ranged", 4),
-	PRAYER("Prayer", 5),
-	MAGIC("Magic", 6),
-	COOKING("Cooking", 7),
-	WOODCUTTING("Woodcutting", 8),
-	FLETCHING("Fletching", 9),
-	FISHING("Fishing", 10),
-	FIREMAKING("Firemaking", 11),
-	CRAFTING("Crafting", 12),
-	SMITHING("Smithing", 13),
-	MINING("Mining", 14),
-	HERBLORE("Herblore", 15),
-	AGILITY("Agility", 16),
-	THIEVING("Thieving", 17),
-	SLAYER("Slayer", 18),
-	FARMING("Farming", 19),
-	RUNECRAFTING("Runecrafting", 20),
-	HUNTER("Hunter", 21),
-	CONSTRUCTION("Construction", 22);
 
-	private final String name;
+    ATTACK("Attack", 0),
+    DEFENCE("Defence", 1),
+    STRENGTH("Strength", 2),
+    HITPOINTS("Hitpoints", 3),
+    RANGED("Ranged", 4),
+    PRAYER("Prayer", 5),
+    MAGIC("Magic", 6),
+    COOKING("Cooking", 7),
+    WOODCUTTING("Woodcutting", 8),
+    FLETCHING("Fletching", 9),
+    FISHING("Fishing", 10),
+    FIREMAKING("Firemaking", 11),
+    CRAFTING("Crafting", 12),
+    SMITHING("Smithing", 13),
+    MINING("Mining", 14),
+    HERBLORE("Herblore", 15),
+    AGILITY("Agility", 16),
+    THIEVING("Thieving", 17),
+    SLAYER("Slayer", 18),
+    FARMING("Farming", 19),
+    RUNECRAFTING("Runecrafting", 20),
+    HUNTER("Hunter", 21),
+    CONSTRUCTION("Construction", 22);
+
+    private final String name;
     private final int index;
 
-	Skill(String name, int index) {
-		this.name = name;
+    Skill(String name, int index) {
+        this.name = name;
         this.index = index;
-	}
+    }
 
-	public String skillName() {
-		return name;
-	}
-    
+    public static Skill forName(String name) {
+        for (Skill skill : values()) {
+            if (skill.name.equalsIgnoreCase(name)) {
+                return skill;
+            }
+        }
+        return null;
+    }
+
+    public static Skill forIndex(int index) {
+        for (Skill skill : values()) {
+            if (skill.index == index) {
+                return skill;
+            }
+        }
+        return null;
+    }
+
+    public String skillName() {
+        return name;
+    }
+
     public int index() {
         return index;
     }
-
-	public static Skill forName(String name) {
-		for (Skill skill : values()) {
-			if (skill.name.equalsIgnoreCase(name)) {
-				return skill;
-			}
-		}
-		return null;
-	}
-
-	public static Skill forIndex(int index) {
-		for (Skill skill : values()) {
-			if (skill.index == index) {
-				return skill;
-			}
-		}
-		return null;
-	}
 
 }

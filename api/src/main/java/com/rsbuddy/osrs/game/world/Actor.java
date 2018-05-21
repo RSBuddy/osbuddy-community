@@ -34,14 +34,20 @@ public interface Actor extends Renderable, Locatable, ModelProvider {
     int LOCATION_SHIFT = 7;
     int MAX_HEALTH = 255;
 
-	String name();
+    String name();
 
-	String text();
-	void setText(String text);
+    String text();
+
+    void setText(String text);
+
     int animation();
+
     Actor interacting();
+
     Object interactingRaw();
+
     int[] hitTimes();
+
     int[] hitDamages();
 
     int maxHealth();
@@ -61,29 +67,50 @@ public interface Actor extends Renderable, Locatable, ModelProvider {
      * At present it is whether or not the health bar amount is == 255, but it can change in the future.
      *
      * @return true if they are at full health, false if they aren't.
-     * */
+     */
     boolean fullHealth();
 
     int health();
+
     int absHealth();
+
     int interactingIndex();
+
     boolean isInteracting();
+
     int localX();
+
     int localY();
+
     int angle();
+
     int x();
+
     int y();
+
     int floor();
+
     Tile location();
+
     int[] pathX();
+
     int[] pathY();
+
     Tile[] walkingQueue();
+
     Tile queuedTile();
+
     boolean fighting();
+
     int lastCombatTick();
+
     int hashCode();
+
     Model model();
+
     Object obj();
+
     int graphic();
+
     int pose();
 }

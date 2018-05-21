@@ -41,7 +41,7 @@ public interface Skills {
      * Get the overall experience of the current player.
      *
      * @return All of the user's experiences added up.
-     * */
+     */
 
     long overallExp();
 
@@ -49,7 +49,7 @@ public interface Skills {
      * Get the total level of the current player.
      *
      * @return All of the user's levels added up.
-     * */
+     */
 
     int totalLevel();
 
@@ -57,9 +57,8 @@ public interface Skills {
      * Get the current experience of a skill.
      *
      * @param index The index of a skill to get the experience in.
-     *
      * @return The current experience of a particular skill.
-     * */
+     */
 
     int exp(final int index);
 
@@ -67,9 +66,8 @@ public interface Skills {
      * Get the current experience of a skill.
      *
      * @param skill The skill to get the experience in.
-     *
      * @return The current experience of a particular skill.
-     * */
+     */
 
     int exp(final Skill skill);
 
@@ -77,9 +75,8 @@ public interface Skills {
      * Get the current (boosted or drained) level of a skill by the index.
      *
      * @param index The index of a skill to get the level of.
-     *
      * @return The current level of a particular skill.
-     * */
+     */
 
     int currentLevel(final int index);
 
@@ -87,9 +84,8 @@ public interface Skills {
      * Get the current (boosted or drained) level of a skill.
      *
      * @param skill The skill to get the level of.
-     *
      * @return The current level of a particular skill.
-     * */
+     */
 
     int currentLevel(final Skill skill);
 
@@ -97,9 +93,8 @@ public interface Skills {
      * Get the base (non-boosted and non-drained) level of a skill by the index.
      *
      * @param index The index of the skill to get the level of.
-     *
      * @return The base level of the skill.
-     * */
+     */
 
     int level(final int index);
 
@@ -107,9 +102,8 @@ public interface Skills {
      * Get the base (non-boosted and non-drained) level of a skill.
      *
      * @param skill The skill to get the level of.
-     *
      * @return The base level of the skill.
-     * */
+     */
 
     int level(final Skill skill);
 
@@ -117,7 +111,7 @@ public interface Skills {
      * Get all of the current (boosted or drained) levels for the current player.
      *
      * @return All of the current levels.
-     * */
+     */
 
     int[] currentLevels();
 
@@ -125,7 +119,7 @@ public interface Skills {
      * Get all of the experiences for the current player.
      *
      * @return All of the current experiences.
-     * */
+     */
 
     int[] exps();
 
@@ -133,7 +127,7 @@ public interface Skills {
      * Get all of the base (non-boosted and non-drained) levels for the current player.
      *
      * @return All of the base levels.
-     * */
+     */
 
     int[] levels();
 
@@ -155,9 +149,8 @@ public interface Skills {
 
     /**
      * @param xp The xp to calculate the percentage from.
-     *
      * @return The percent you're at for the next level if your xp is at xp.
-     * */
+     */
 
     double percentUntilNext(final int xp);
 
@@ -169,17 +162,15 @@ public interface Skills {
      * Get the experience until the next level.
      *
      * @param skill The skill to find the exp remaining from.
-     *
      * @return The exp until the next level in the specified skill.
-     * */
+     */
 
     int expUntilNext(final Skill skill);
 
     /**
      * @param exp The xp to calculate the percentage from.
-     *
      * @return The xp until the next level if your xp is at xp.
-     * */
+     */
 
     int expUntilNext(final int exp);
 

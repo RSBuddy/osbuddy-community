@@ -32,5 +32,6 @@ package com.rsbuddy.osrs.game.chat;
 
 public interface ClanChatUser extends PlayerData {
     ClanChat.Rank rank();
+
     int world();
 }

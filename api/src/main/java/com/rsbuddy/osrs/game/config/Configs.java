@@ -35,5 +35,6 @@ import javax.inject.Singleton;
 @Singleton
 public interface Configs {
     ItemConfig item(int id);
+
     LocationConfig location(int id);
 }

@@ -31,9 +31,13 @@
 package com.rsbuddy.osrs.game.world;
 
 public interface World {
-	String activity();
-	String hostname();
-	int population();
-	int flags();
-	int number();
+    String activity();
+
+    String hostname();
+
+    int population();
+
+    int flags();
+
+    int number();
 }

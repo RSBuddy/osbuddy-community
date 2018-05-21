@@ -31,11 +31,17 @@
 package com.rsbuddy.osrs.game.world;
 
 public interface Camera {
-	int x();
-	int y();
-	int z();
-	int pitch();
-	int yaw();
-	int pitchDegrees();
-	int yawDegrees();
+    int x();
+
+    int y();
+
+    int z();
+
+    int pitch();
+
+    int yaw();
+
+    int pitchDegrees();
+
+    int yawDegrees();
 }

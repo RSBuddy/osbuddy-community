@@ -32,9 +32,7 @@ package com.rsbuddy.osrs.content.config;
 
 public enum Prayer {
 
-    // drain rates taken from http://2007.runescape.wikia.com/wiki/Prayer
-
-    THICK_SKIN(1, 83, 0, 1d / 12d), // 1 point in 12 seconds so just do some cool division lol
+    THICK_SKIN(1, 83, 0, 1d / 12d),
     BURST_OF_STRENGTH(4, 83, 1, 1d / 12d),
     CLARITY_OF_THOUGHT(7, 83, 2, 1d / 12d),
     SHARP_EYE(8, 83, 18, 1d / 12d),
@@ -65,19 +63,17 @@ public enum Prayer {
     REDEMPTION(49, 83, 16, 1d / 6d),
     SMITE(52, 83, 17, 1d / 1.8d),
 
-	CHIVALRY(60, 83, 25, 1d / 1.8d),       //Thanks to Chookiebear
-	PIETY(70, 83, 26, 1d / 1.5d),          //Updated Jun 27, 2014
+    CHIVALRY(60, 83, 25, 1d / 1.8d),
+    PIETY(70, 83, 26, 1d / 1.5d),
 
-    // added from the raids release
     PRESERVE(55, 83, 28, 1 / 12d),
-    //TODO: Verify these (the bitIds might be swapped)
     RIGOUR(74, 83, 24, 1 / 1.5d),
     AUGURY(77, 83, 27, 1 / 1.5d);
 
     private final int level;
     private final int varId;
     private final int bitId;
-    private final double drainRate; // the amount of points per second
+    private final double drainRate;
 
     Prayer(final int level, final int varId, final int bitId, final double drainRate) {
         this.level = level;
@@ -101,5 +97,6 @@ public enum Prayer {
     public double drainRate() {
         return drainRate;
     }
+
 }
 

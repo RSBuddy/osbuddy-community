@@ -32,7 +32,7 @@ package com.rsbuddy.osrs.event.world;
 
 /**
  * Indicates the Ground Items at a certain tile have been updated.
- *
+ * <p>
  * This is usually called when a stack is updated.
  *
  * @author Shivam

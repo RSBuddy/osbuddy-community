@@ -39,6 +39,8 @@ public interface Projectiles {
     int MAP_RADIUS = 26;
 
     Collection<Projectile> loaded();
+
     Collection<Projectile> loaded(Predicate<Projectile> predicate);
+
     Collection<Projectile> loaded(Predicate<Projectile> predicate, final int radius);
 }

@@ -32,8 +32,6 @@ package com.rsbuddy.osrs.event;
 
 import com.rsbuddy.osrs.game.world.Actor;
 
-import java.lang.ref.WeakReference;
-
 public class HitsplatCreated {
     private final Actor actor;
 

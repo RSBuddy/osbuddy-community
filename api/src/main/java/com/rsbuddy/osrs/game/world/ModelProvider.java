@@ -30,10 +30,12 @@
 
 package com.rsbuddy.osrs.game.world;
 
-import java.awt.*;
+import java.awt.Point;
 
 public interface ModelProvider {
     Model model();
+
     Point screenPoint();
+
     Point mapPoint();
 }

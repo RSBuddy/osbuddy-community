@@ -51,20 +51,35 @@ public interface Game {
     void loop(Callable<Boolean> task, long interval, String name);
 
     Configs configs();
+
     Camera camera();
+
     PlayerRegistry<Friend> friends();
+
     PlayerRegistry<Ignore> ignores();
+
     ClanChat clanChat();
+
     Locations locations();
+
     Interfaces interfaces();
+
     GroundItems items();
+
     MiniMenu miniMenu();
+
     Npcs npcs();
+
     Players players();
+
     Projectiles projectiles();
+
     Variables vars();
+
     Skills skills();
+
     Viewport viewport();
+
     Inventories inventories();
 
     GameState state();

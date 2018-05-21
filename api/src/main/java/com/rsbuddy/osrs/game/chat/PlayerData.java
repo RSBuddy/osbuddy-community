@@ -33,9 +33,11 @@ package com.rsbuddy.osrs.game.chat;
 public interface PlayerData {
 
     String displayName();
+
     String screenName();
 
     String previousDisplayName();
+
     String previousScreenName();
 
 }

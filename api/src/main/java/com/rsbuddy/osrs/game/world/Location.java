@@ -30,27 +30,47 @@
 
 package com.rsbuddy.osrs.game.world;
 
-import java.awt.*;
+import java.awt.Dimension;
+import java.awt.Graphics2D;
+import java.awt.Point;
+import java.awt.Polygon;
 
 public interface Location extends Locatable, ModelProvider {
-	long hash();
-	int id();
-	int x();
-	int y();
-	int localX();
-	int localY();
-	int floor();
-	String name();
-	Area area();
-	Dimension size();
-	Tile center();
-	Tile location();
-	boolean onScreen();
-	Polygon screenShape();
-	String[] menuActions();
-	void fillGround(Graphics2D g);
-	Point screenPoint();
-	Object instance();
+    long hash();
+
+    int id();
+
+    int x();
+
+    int y();
+
+    int localX();
+
+    int localY();
+
+    int floor();
+
+    String name();
+
+    Area area();
+
+    Dimension size();
+
+    Tile center();
+
+    Tile location();
+
+    boolean onScreen();
+
+    Polygon screenShape();
+
+    String[] menuActions();
+
+    void fillGround(Graphics2D g);
+
+    Point screenPoint();
+
+    Object instance();
 
     enum Type {
         WORLD,

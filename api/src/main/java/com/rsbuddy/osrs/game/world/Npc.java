@@ -33,14 +33,24 @@ package com.rsbuddy.osrs.game.world;
 
 public interface Npc extends Actor {
     String[] actions();
+
     String name();
+
     void setName(String name);
+
     int id();
+
     int level();
+
     int hashCode();
+
     String toString();
+
     int distanceTo();
+
     boolean impostor();
+
     int index();
+
     int[] modelIds();
 }

@@ -34,6 +34,16 @@ import java.util.Collection;
 
 public interface ClanChat {
 
+    String name();
+
+    String owner();
+
+    Collection<ClanChatUser> members();
+
+    int size();
+
+    int maxSize();
+
     enum Rank {
 
         UNRANKED,
@@ -47,15 +57,5 @@ public interface ClanChat {
         OWNER;
 
     }
-
-    String name();
-
-    String owner();
-
-    Collection<ClanChatUser> members();
-
-    int size();
-
-    int maxSize();
 
 }

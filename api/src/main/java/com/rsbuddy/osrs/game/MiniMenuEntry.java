@@ -89,15 +89,15 @@ public class MiniMenuEntry<T> {
     public int itemId() {
         switch (type) {
             case INVENTORY_ITEM: {
-                InventoryItem item = (InventoryItem)target.get();
+                InventoryItem item = (InventoryItem) target.get();
                 if (item != null) return item.id();
             }
             case WIDGET: {
-                Component component = (Component)target.get();
+                Component component = (Component) target.get();
                 if (component != null) return component.itemId();
             }
             case GROUND_ITEM: {
-                GroundItem item = (GroundItem)target.get();
+                GroundItem item = (GroundItem) target.get();
                 if (item != null) return item.id();
             }
         }
@@ -115,17 +115,16 @@ public class MiniMenuEntry<T> {
         NPC(1943),
         PLAYER(1944),
         WIDGET(1945),
-        OTHER(1946)
-        ;
-
-        Type(int virtualOpcode) {
-            this.virtualOpcode = virtualOpcode;
-        }
+        OTHER(1946);
 
         /**
          * The opcode to use when creating an entry with {@link MiniMenu#addEntry(MiniMenuEntry)}.
          * Will not be passed back into the game client.
          */
         public final int virtualOpcode;
+
+        Type(int virtualOpcode) {
+            this.virtualOpcode = virtualOpcode;
+        }
     }
 }

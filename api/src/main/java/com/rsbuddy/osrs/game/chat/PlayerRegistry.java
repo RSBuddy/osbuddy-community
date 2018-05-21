@@ -60,5 +60,6 @@ public interface PlayerRegistry<T extends PlayerData> {
     Collection<T> get();
 
     int size();
+
     int maxSize();
 }

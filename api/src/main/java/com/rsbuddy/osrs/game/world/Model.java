@@ -37,11 +37,18 @@ import java.awt.Shape;
 
 public interface Model {
     Model snapshot();
+
     Polygon hull();
+
     Point centroid();
+
     Point centroidOffsetHeight(final int height);
+
     Shape centroid(int size);
+
     boolean drawHull(Graphics2D g);
+
     boolean fillHull(Graphics2D g);
+
     boolean fillCentroid(Graphics2D g, int size);
 }

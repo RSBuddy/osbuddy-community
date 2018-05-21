@@ -40,6 +40,8 @@ public class NpcDespawned {
         this.npc = npc;
     }
 
-    public Npc npc() { return npc; }
+    public Npc npc() {
+        return npc;
+    }
 
 }

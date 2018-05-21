@@ -83,10 +83,6 @@ public class MessageEvent {
      * Generates a screenName similar to the one Jagex uses internally in the client (r162). Not every
      * message needs this, so only calculate the screen name once, and if it is needed.
      * <p>
-     * Examples:
-     *
-     * <img=1>Mod Harrison -> mod_harrison
-     * Matthew             -> matthew
      *
      * @return the user's screen name
      */

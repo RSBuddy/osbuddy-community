@@ -40,6 +40,8 @@ public class NpcSpawned {
         this.npc = npc;
     }
 
-    public Npc npc() { return npc; }
+    public Npc npc() {
+        return npc;
+    }
 
 }

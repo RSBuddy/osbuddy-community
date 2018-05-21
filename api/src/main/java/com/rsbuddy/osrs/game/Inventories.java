@@ -41,23 +41,23 @@ public interface Inventories {
     /**
      * Looks up an inventory in the client.
      *
-     * @param id    the inventory id
-     * @return      An Inventory if it exists, otherwise null
+     * @param id the inventory id
+     * @return An Inventory if it exists, otherwise null
      */
     Inventory get(final InventoryId id);
 
     /**
      * Looks up an inventory in the client.
      *
-     * @param id    the inventory id
-     * @return      An Inventory if it exists, otherwise null
+     * @param id the inventory id
+     * @return An Inventory if it exists, otherwise null
      */
     Inventory get(final int id);
 
     /**
      * Returns all of the active inventories in the game!
      *
-     * @return  collection of all inventories
+     * @return collection of all inventories
      */
     Collection<Inventory> all();
 

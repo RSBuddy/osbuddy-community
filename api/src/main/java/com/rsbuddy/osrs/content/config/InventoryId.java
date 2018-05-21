@@ -46,11 +46,10 @@ public enum InventoryId {
     GE_COLLECT_SLOT_5(522),
     GE_COLLECT_SLOT_6(523),
     GE_COLLECT_SLOT_7(539),
-    GE_COLLECT_SLOT_8(540),
-    ;
+    GE_COLLECT_SLOT_8(540),;
 
     public final int id;
-    
+
     InventoryId(int id) {
         this.id = id;
     }

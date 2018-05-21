@@ -38,6 +38,7 @@ import javax.inject.Singleton;
 public interface Variables {
 
     Varbit varbit(final VarbitId id);
+
     Varbit varbit(final int id);
 
     int[] varps();

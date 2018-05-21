@@ -32,7 +32,7 @@ package com.rsbuddy.osrs.game.ui;
 
 import com.rsbuddy.osrs.game.Game;
 
-import java.awt.*;
+import java.awt.Rectangle;
 
 /**
  * A wrapper class for an item in the inventory.

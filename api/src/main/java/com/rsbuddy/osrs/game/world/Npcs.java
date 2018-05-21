@@ -34,19 +34,23 @@ import java.util.Collection;
 
 public interface Npcs {
     Npc get(final Predicate<Npc> predicate);
+
     Collection<Npc> loaded(final Predicate<Npc> predicate);
+
     Collection<Npc> loadedById(final Predicate<Integer> predicate);
+
     Collection<Npc> loadedByName(final Predicate<String> predicate);
+
     Collection<Npc> loadedReflect(final Predicate<Object> predicate);
+
     Collection<Npc> loaded();
 
     /**
      * Attempt to find the max health of an {@link Npc} by it's id.
      *
      * @param npcId the id of the npc to look up.
-     *
      * @return The max health if available, otherwise -1.
-     * */
+     */
 
     int maxHealth(int npcId);
 }

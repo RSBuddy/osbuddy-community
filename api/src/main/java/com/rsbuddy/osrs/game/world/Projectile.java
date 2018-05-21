@@ -36,7 +36,9 @@ package com.rsbuddy.osrs.game.world;
 public interface Projectile extends Renderable, Locatable {
 
     Tile startingLocation();
+
     Actor target();
+
     int start();
 
     int id();
