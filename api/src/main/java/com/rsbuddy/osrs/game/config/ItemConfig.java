@@ -57,12 +57,4 @@ public interface ItemConfig {
 
     boolean noted();
 
-    int karamjaSell();
-
-    int karamjaSell(int amount);
-
-    int karamjaTotal(int amount);
-
-    int karamjaAverage(int amount);
-
 }
