@@ -56,6 +56,11 @@ public final class InventoryItem {
     private final Slot slot;
 
     /**
+     * The name of the item
+     */
+    private String name = null;
+
+    /**
      * Creates a wrapper for an item in the inventory.
      *
      * @param game      an instance of the game class.
@@ -81,7 +86,8 @@ public final class InventoryItem {
      * @return the name of the item.
      */
     public String name() {
-        return game.itemCache().name(id);
+        if (name != null) return name;
+        return (name = game.configs().item(id).name());
     }
 
     /**
