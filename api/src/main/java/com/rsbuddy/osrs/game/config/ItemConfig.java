@@ -57,4 +57,6 @@ public interface ItemConfig {
 
     boolean noted();
 
+    int shiftClickIndex();
+
 }
