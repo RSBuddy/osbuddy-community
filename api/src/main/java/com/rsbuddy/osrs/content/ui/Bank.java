@@ -69,11 +69,7 @@ public class Bank {
     }
 
     public boolean open() {
-        final long millis = System.currentTimeMillis();
-        if (millis - lastOpenCheck < 600) return open;
-        final Component component = interfaces.component(IFID, 0);
-        lastOpenCheck = millis;
-        return (open = component != null && component.visible() && component.absoluteX() > 0);
+        return inventory() != null;
     }
 
     public boolean pinScreenOpen() {
