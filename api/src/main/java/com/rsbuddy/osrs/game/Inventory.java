@@ -49,10 +49,16 @@ public interface Inventory {
 
     int count(final boolean includeStacks, final int... itemIds);
 
+    int count();
+
+    int count(final boolean includeStacks);
+
     int[] stacks();
 
     void setItemStack(int position, int stackSize);
 
     int capacity();
+
+    boolean full();
 
 }
