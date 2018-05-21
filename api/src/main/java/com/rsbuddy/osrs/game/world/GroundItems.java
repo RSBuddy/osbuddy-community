@@ -32,6 +32,7 @@ package com.rsbuddy.osrs.game.world;
 
 
 import java.util.Collection;
+import java.util.function.Predicate;
 
 public interface GroundItems {
     int MAP_RADIUS = 26;

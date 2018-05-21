@@ -31,6 +31,7 @@
 package com.rsbuddy.osrs.game.world;
 
 import java.util.Collection;
+import java.util.function.Predicate;
 
 public interface Npcs {
     Npc get(final Predicate<Npc> predicate);

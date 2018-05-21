@@ -31,6 +31,7 @@
 package com.rsbuddy.osrs.game.world;
 
 import java.util.Collection;
+import java.util.function.Predicate;
 
 public interface Players {
     Collection<Player> loaded(Predicate<Player> predicate);

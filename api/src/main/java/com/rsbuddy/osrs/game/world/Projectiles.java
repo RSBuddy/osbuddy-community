@@ -31,6 +31,7 @@
 package com.rsbuddy.osrs.game.world;
 
 import java.util.Collection;
+import java.util.function.Predicate;
 
 /**
  * Created by Kyle on 10/30/2014.
