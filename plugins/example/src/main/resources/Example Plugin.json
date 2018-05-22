@@ -1,0 +1,14 @@
+{
+  "class": "com.rsbuddy.osrs.plugins.example.ExamplePlugin",
+  "description": "OSBuddy Example Plugin",
+  "version": "1.0.0",
+  "developers": [],
+  "settings": [
+	{
+	  "id": "Draw hello world",
+	  "description": "Draws \"hello world\" to the game screen.",
+	  "type": "toggle",
+	  "default": "false"
+	}
+  ]
+}
