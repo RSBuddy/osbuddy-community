@@ -32,11 +32,9 @@ package com.rsbuddy.osrs.game.ui;
 
 import com.rsbuddy.osrs.content.ui.GameTab;
 
-import javax.inject.Singleton;
 import java.awt.Rectangle;
 import java.util.List;
 
-@Singleton
 public interface Interfaces {
 
     int topLevelIfId();

@@ -32,9 +32,6 @@ package com.rsbuddy.osrs.game;
 
 import com.rsbuddy.osrs.content.config.Skill;
 
-import javax.inject.Singleton;
-
-@Singleton
 public interface Skills {
 
     /**

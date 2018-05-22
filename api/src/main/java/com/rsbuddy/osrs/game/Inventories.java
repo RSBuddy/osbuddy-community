@@ -32,10 +32,8 @@ package com.rsbuddy.osrs.game;
 
 import com.rsbuddy.osrs.content.config.InventoryId;
 
-import javax.inject.Singleton;
 import java.util.Collection;
 
-@Singleton
 public interface Inventories {
 
     /**

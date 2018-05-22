@@ -32,9 +32,6 @@ package com.rsbuddy.osrs.game;
 
 import com.rsbuddy.osrs.content.config.VarbitId;
 
-import javax.inject.Singleton;
-
-@Singleton
 public interface Variables {
 
     Varbit varbit(final VarbitId id);
