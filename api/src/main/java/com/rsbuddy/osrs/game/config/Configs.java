@@ -30,9 +30,6 @@
 
 package com.rsbuddy.osrs.game.config;
 
-import javax.inject.Singleton;
-
-@Singleton
 public interface Configs {
     ItemConfig item(int id);
 
