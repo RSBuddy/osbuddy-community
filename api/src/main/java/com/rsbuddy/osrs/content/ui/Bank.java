@@ -60,8 +60,7 @@ public class Bank {
 
     private final Interfaces interfaces;
     private final Inventories inventories;
-    private boolean open = false;
-    private long lastOpenCheck = 0;
+
     @Inject
     public Bank(Inventories inventories, Interfaces interfaces) {
         this.inventories = inventories;
@@ -135,7 +134,6 @@ public class Bank {
         if (position < 0 || position > 27) {
             return;
         }
-
         if (open()) {
             Component inventory = interfaces.component(PLAYER_INVENTORY_IFID, PLAYER_INVENTORY_COMPONENT);
 
