@@ -2,6 +2,9 @@ package com.rsbuddy.osrs.plugins.example;
 
 import com.rsbuddy.osrs.Plugin;
 import com.rsbuddy.osrs.PluginContext;
+import com.rsbuddy.osrs.annotation.Paint;
+import com.rsbuddy.osrs.annotation.Schedule;
+import com.rsbuddy.osrs.annotation.Setting;
 import com.rsbuddy.osrs.content.ui.Bank;
 import com.rsbuddy.osrs.game.Game;
 import com.rsbuddy.osrs.game.ui.Interfaces;
@@ -13,40 +16,38 @@ import org.slf4j.LoggerFactory;
 import javax.inject.Inject;
 import java.awt.*;
 
+@Paint(PaintHook.TLI)
 public class ExamplePlugin implements Plugin, Paintable {
 
-    final Logger log = LoggerFactory.getLogger(getClass());
+    private final Logger log = LoggerFactory.getLogger(getClass());
 
     @Inject
-    Game game;
+    private Game game;
 
     @Inject
-    Bank bank;
+    private Bank bank;
 
-    @Inject
-    Interfaces ui;
-
-    boolean running;
+    @Setting("Draw hello world")
+    private boolean draw;
 
     @Override
     public void init(PluginContext pluginContext) {
-        running = true;
-        ui.register(PaintHook.TLI, this);
-        game.loop(() -> {
-            log.info("Tick: " + game.time());
-            return running;
-        }, 1000, "Bank check loop");
+        log.info("init!");
     }
 
     @Override
     public void dispose(PluginContext pluginContext) {
-        running = false;
-        ui.unregister(this);
+        log.info("dispose");
+    }
+
+    @Schedule(1000)
+    public void loop() {
+        log.info("Tick: " + game.time());
     }
 
     @Override
     public void paint(Graphics2D g) {
-        g.drawString(bank.open() ? "Your bank is open!!" : "Your bank isn't open.", 20, 40);
+        g.drawString(draw ? "Hello world" : (bank.open() ? "Your bank is open!!" : "Your bank isn't open."), 20, 40);
     }
 
 }
