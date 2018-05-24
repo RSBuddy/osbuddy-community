@@ -44,40 +44,128 @@ import java.util.concurrent.Callable;
  */
 public interface Game {
 
+    /**
+     * Runs a task on the game thread once.
+     *
+     * @param task The callback.
+     * @param name A name for the task for profiling purposes.
+     */
     void once(Runnable task, String name);
 
+    /**
+     * Runs a task on the game thread each <tt>interval</tt>ms until it returns <tt>false</tt>.
+     * 
+     * @param task The callback (which should return <tt>false</tt> to end execution.
+     * @param interval The number of milliseconds between callbacks.
+     * @param name A name for the task for profiling purposes.
+     */
     void loop(Callable<Boolean> task, long interval, String name);
 
+    /**
+     * An object to access game configs (such as NPC and item metadata).
+     * 
+     * @return The singleton Configs interface.
+     */
     Configs configs();
 
-    Camera camera();
-
+    /**
+     * The local player's friends list.
+     * 
+     * @return A {@link PlayerRegistry} containing the friends.
+     */
     PlayerRegistry<Friend> friends();
 
+    /**
+     * The local player's ignore list.
+     *
+     * @return A {@link PlayerRegistry} containing the ignores.
+     */
     PlayerRegistry<Ignore> ignores();
 
+    /**
+     * The local player's clan chat.
+     *
+     * @return An object to access the clan chat.
+     */
     ClanChat clanChat();
 
+    /**
+     * An object to access the game locations that are currently loaded.
+     * 
+     * @return An object to access game locations.
+     */
     Locations locations();
 
+    /**
+     * An object to access the game's UI.
+     * 
+     * @return An object to access game UI.
+     */
     Interfaces interfaces();
 
+    /**
+     * An object to access items that are currently on the ground.
+     * 
+     * @return An object to access ground items.
+     */
     GroundItems items();
 
+    /**
+     * An object to access the context-sensitive right click menu ("mini-menu").
+     * 
+     * @return An object to access the minimenu.
+     */
     MiniMenu miniMenu();
 
+    /**
+     * An object to access the loaded NPCs.
+     * 
+     * @return An object to access NPCs.
+     */
     Npcs npcs();
 
+    /**
+     * An object to access the loaded players.
+     * 
+     * @return An object to access players.
+     */
     Players players();
 
+    /**
+     * An object to access the loaded projectiles.
+     *
+     * @return An object to access projectiles.
+     */
     Projectiles projectiles();
 
+    /**
+     * An object to access the variables that make up certain player settings
+     * the player's state in various game content.
+     * 
+     * @return An object to access variables.
+     */
     Variables vars();
 
+    /**
+     * An object to access the local player's skill levels and experience.
+     * 
+     * @return An object to access skills and experience.
+     */
     Skills skills();
 
+    /**
+     * An object to access properties of the game's 3d rendering viewport
+     * and compute various projections.
+     * 
+     * @return An object to access the viewport.
+     */
     Viewport viewport();
 
+    /**
+     * An object to access the various inventories that are cached by the game client.
+     *
+     * @return An object to access the game inventories.
+     */
     Inventories inventories();
 
     GameState state();

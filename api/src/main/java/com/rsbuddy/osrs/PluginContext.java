@@ -32,7 +32,7 @@ package com.rsbuddy.osrs;
 
 import com.rsbuddy.osrs.game.Game;
 
-import java.net.URL;
+import java.io.InputStream;
 import java.util.concurrent.ScheduledExecutorService;
 
 /**
@@ -52,7 +52,7 @@ public interface PluginContext {
 
     <T> void set(String setting, T value);
 
-    URL resource(String name);
+    InputStream resource(String name);
 
     void exit();
 

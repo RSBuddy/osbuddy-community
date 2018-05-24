@@ -59,4 +59,14 @@ public interface Viewport {
     Rectangle bounds();
 
     Ellipse2D minimapBounds();
+
+    int camX();
+
+    int camY();
+
+    int camZ();
+
+    int camPitch();
+
+    int camYaw();
 }

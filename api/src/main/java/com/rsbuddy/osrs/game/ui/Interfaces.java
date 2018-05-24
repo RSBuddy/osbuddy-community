@@ -61,4 +61,8 @@ public interface Interfaces {
 
     GameTab currentGameTab();
 
+    void register(PaintHook hook, Paintable p);
+
+    void unregister(Paintable p);
+
 }

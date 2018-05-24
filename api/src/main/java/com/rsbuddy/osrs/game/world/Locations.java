@@ -59,7 +59,6 @@ public interface Locations {
      * @param predicate The condition
      * @param radius    The radius to search
      */
-
     Collection<Location> loaded(EnumSet<Location.Type> types, Predicate<Location> predicate, int radius);
 
     Collection<Location> loaded(int id, EnumSet<Location.Type> types, Predicate<Location> predicate, int radius);
