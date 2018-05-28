@@ -123,7 +123,7 @@ public class MessageEvent {
         modified = true;
     }
 
-    private void setModified(final boolean modified) {
+    public void setModified(final boolean modified) {
         this.modified = modified;
     }
 
