@@ -123,10 +123,6 @@ public class MessageEvent {
         modified = true;
     }
 
-    public void setModified(final boolean modified) {
-        this.modified = modified;
-    }
-
     public boolean modified() {
         return modified;
     }
