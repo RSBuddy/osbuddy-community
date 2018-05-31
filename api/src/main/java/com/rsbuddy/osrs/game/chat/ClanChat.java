@@ -54,7 +54,8 @@ public interface ClanChat {
         LIEUTENANT,
         CAPTAIN,
         GENERAL,
-        OWNER;
+        OWNER,
+        JAGEX_MOD;
 
     }
 
