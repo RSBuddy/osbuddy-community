@@ -44,4 +44,7 @@ public interface Projectile extends Renderable, Locatable {
     int id();
 
     Model model();
+
+    Tile destination();
+
 }
