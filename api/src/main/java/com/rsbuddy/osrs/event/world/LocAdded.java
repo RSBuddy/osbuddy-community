@@ -38,6 +38,7 @@ public final class LocAdded {
     private final int id;
     private final int rot;
     private final int shape;
+    private boolean visible = true;
 
     public LocAdded(int floor, int x, int y, int id, int rot, int shape) {
 
@@ -72,6 +73,14 @@ public final class LocAdded {
 
     public int shape() {
         return shape;
+    }
+
+    public void visible(final boolean visible) {
+        this.visible = visible;
+    }
+
+    public boolean visible() {
+        return visible;
     }
 
 }
