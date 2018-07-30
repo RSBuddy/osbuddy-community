@@ -244,4 +244,8 @@ public interface Game {
 
     int topFloorToRender();
 
+    int canvasWidth();
+
+    int canvasHeight();
+
 }
