@@ -132,6 +132,10 @@ public class Tile implements Locatable {
         return floor == tile.floor && x == tile.x && y == tile.y;
     }
 
+    public boolean equals(final int x, final int y, final int floor) {
+        return this.x == x && this.y == y && this.floor == floor;
+    }
+
     public int distanceTo(int x, int y) {
         return (int) Math.sqrt(Math.pow(x - this.x, 2) + Math.pow(y - this.y, 2));
     }
