@@ -54,8 +54,6 @@ public interface Player extends Actor {
 
     int index();
 
-    int regionId();
-
     interface Equipment {
         int HEAD = 0;
         int CAPE = 1;

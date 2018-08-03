@@ -31,5 +31,13 @@
 package com.rsbuddy.osrs.game.world;
 
 public interface Locatable {
+    int X_SHIFT = 6;
+    int Y_SHIFT = 6;
+
     Tile location();
+
+    default int regionId() {
+        final Tile t = location();
+        return ((((t.x() >> X_SHIFT) & 0xFF) << 8) | (((t.y() >> Y_SHIFT) & 0xFF)));
+    }
 }
