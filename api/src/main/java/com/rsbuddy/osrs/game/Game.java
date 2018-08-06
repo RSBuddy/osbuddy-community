@@ -49,8 +49,9 @@ public interface Game {
      *
      * @param task The callback.
      * @param name A name for the task for profiling purposes.
+     * @return The execution id of the submitted task which can be cancelled with {@link Game#cancel(int)}.
      */
-    void once(Runnable task, String name);
+    int once(Runnable task, String name);
 
     /**
      * Runs a task on the game thread each <tt>interval</tt>ms until it returns <tt>false</tt>.
@@ -58,8 +59,17 @@ public interface Game {
      * @param task The callback (which should return <tt>false</tt> to end execution.
      * @param interval The number of milliseconds between callbacks.
      * @param name A name for the task for profiling purposes.
+     * @return The execution id of the submitted task which can be cancelled with {@link Game#cancel(int)}.
      */
-    void loop(Callable<Boolean> task, long interval, String name);
+    int loop(Callable<Boolean> task, long interval, String name);
+
+    /**
+     * Cancels a task
+     *
+     * @param taskId The task execution id to cancel. See {@link Game#once(Runnable, String)} and {@link Game#loop(Callable, long, String)}.
+     * @return Whether or not the task was cancelled successfully. This will return <tt>false</tt> if it was already cancelled or is an invalid task id.
+     */
+    boolean cancel(int taskId);
 
     /**
      * An object to access game configs (such as NPC and item metadata).
