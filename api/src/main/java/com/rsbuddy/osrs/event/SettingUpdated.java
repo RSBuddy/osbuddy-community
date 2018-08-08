@@ -48,6 +48,18 @@ public class SettingUpdated {
         return (Integer) value;
     }
 
+    public int parseInt() {
+        return Integer.parseInt(toString());
+    }
+
+    public int tryParseInt(int defaultValue) {
+        try {
+            return parseInt();
+        } catch (NumberFormatException e) {
+            return defaultValue;
+        }
+    }
+
     public float asFloat() {
         return (Float) value;
     }
