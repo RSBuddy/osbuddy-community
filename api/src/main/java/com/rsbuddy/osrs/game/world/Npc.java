@@ -50,6 +50,15 @@ public interface Npc extends Actor {
 
     boolean impostor();
 
+    /**
+     * Gets the size of the NPC.
+     *
+     * An NPC with a size of `2` means that the NPC takes up a 2x2 area.
+     *
+     * @return  the size of the NPC
+     */
+    int size();
+
     int index();
 
     int[] modelIds();
