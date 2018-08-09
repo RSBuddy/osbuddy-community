@@ -51,6 +51,14 @@ public interface Skills {
     int totalLevel();
 
     /**
+     * Get the total level of the current player's free-to-play skills.
+     *
+     * @return All of the user's free-to-play levels added up.
+     */
+
+    int totalF2pLevel();
+
+    /**
      * Get the current experience of a skill.
      *
      * @param index The index of a skill to get the experience in.
