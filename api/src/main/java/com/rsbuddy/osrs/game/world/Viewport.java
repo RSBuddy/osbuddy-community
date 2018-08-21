@@ -30,9 +30,7 @@
 
 package com.rsbuddy.osrs.game.world;
 
-import java.awt.Point;
-import java.awt.Polygon;
-import java.awt.Rectangle;
+import java.awt.*;
 import java.awt.geom.Ellipse2D;
 
 public interface Viewport {
@@ -55,6 +53,10 @@ public interface Viewport {
     Polygon tileQuadAt(Locatable tile, double height);
 
     Point worldToScreen(int x, int y, int floor);
+
+    Point sceneToScreen(int localX, int localY, int floor, final int offset);
+
+    int tileHeight(final int x, final int y, final int floor);
 
     Rectangle bounds();
 
