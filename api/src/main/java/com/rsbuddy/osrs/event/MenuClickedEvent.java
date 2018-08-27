@@ -96,6 +96,14 @@ public class MenuClickedEvent {
         return this;
     }
 
+    public int x() {
+        return x;
+    }
+
+    public int y() {
+        return y;
+    }
+
     public int actionParam0() {
         return actionParam0;
     }
