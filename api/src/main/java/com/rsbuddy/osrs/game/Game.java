@@ -54,14 +54,23 @@ public interface Game {
     int once(Runnable task, String name);
 
     /**
-     * Runs a task on the game thread each <tt>interval</tt>ms until it returns <tt>false</tt>.
+     * Runs a task on the game thread each <tt>interval</tt>ms until it returns <tt>false</tt> or it is cancelled.
      * 
-     * @param task The callback (which should return <tt>false</tt> to end execution.
+     * @param task The callback (which should return <tt>false</tt> to end execution).
      * @param interval The number of milliseconds between callbacks.
      * @param name A name for the task for profiling purposes.
      * @return The execution id of the submitted task which can be cancelled with {@link Game#cancel(int)}.
      */
     int loop(Callable<Boolean> task, long interval, String name);
+
+    /**
+     * Executes a task after each content tick until it returns <tt>false</tt> or it is cancelled.
+     *
+     * @param task The callback (which should return <tt>false</tt> to end execution).
+     * @param name A name for the task for profiling purposes.
+     * @return The execution id of the submitted task which can be cancelled with {@link Game#cancel(int)}.
+     */
+    int onContentTick(Callable<Boolean> task, String name);
 
     /**
      * Cancels a task
