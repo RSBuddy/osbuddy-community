@@ -34,12 +34,7 @@ import java.awt.*;
 import java.util.List;
 
 public interface Component {
-
     boolean containsAction(String... phrases);
-
-    void addAction(String action);
-
-    void addActionLast(String action);
 
     void setWidth(int width);
 
