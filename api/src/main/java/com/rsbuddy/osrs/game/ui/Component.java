@@ -30,9 +30,7 @@
 
 package com.rsbuddy.osrs.game.ui;
 
-import java.awt.Graphics;
-import java.awt.Point;
-import java.awt.Rectangle;
+import java.awt.*;
 import java.util.List;
 
 public interface Component {
@@ -40,8 +38,6 @@ public interface Component {
     boolean containsAction(String... phrases);
 
     void addAction(String action);
-
-    void addActionFirst(String action);
 
     void addActionLast(String action);
 
