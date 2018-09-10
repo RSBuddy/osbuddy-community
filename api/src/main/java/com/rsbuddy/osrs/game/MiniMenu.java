@@ -30,11 +30,9 @@
 
 package com.rsbuddy.osrs.game;
 
-import javax.inject.Singleton;
-import java.awt.Rectangle;
+import java.awt.*;
 import java.util.EnumSet;
 
-@Singleton
 public interface MiniMenu {
     boolean open();
 
