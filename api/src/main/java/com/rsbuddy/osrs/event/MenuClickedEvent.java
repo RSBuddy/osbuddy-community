@@ -96,6 +96,10 @@ public class MenuClickedEvent {
         return this;
     }
 
+    public int targetId() {
+        return targetId;
+    }
+
     public int x() {
         return x;
     }

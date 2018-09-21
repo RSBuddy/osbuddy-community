@@ -53,6 +53,7 @@ public class Bank {
     public static final int IFID = 12;
     public static final int MODAL_COMPONENT = 11;
     public static final int INVENTORY_COMPONENT = 23;
+    public static final int SEARCH_BUTTON_COMPONENT = 39;
     public static final int ITEM_COUNT_COMPONENT = 16;
     public static final int TITLE_COMPONENT = 15;
     public static final int TAB_SEPARATOR_CHILD = 800;
