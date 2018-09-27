@@ -41,7 +41,7 @@ public enum GameTab {
     PRAYER,
     MAGIC,
     FRIENDS,
-    IGNORE,
+    ACCOUNT_MANAGEMENT,
     CLAN_CHAT,
     OPTIONS,
     EMOTES,
