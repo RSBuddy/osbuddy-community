@@ -35,6 +35,8 @@ import java.util.Set;
 
 public interface Inventory {
 
+    int id();
+
     int[] items();
 
     boolean contains(int itemId);
