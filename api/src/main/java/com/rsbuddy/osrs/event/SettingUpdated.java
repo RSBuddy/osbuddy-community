@@ -61,7 +61,17 @@ public class SettingUpdated {
     }
 
     public float asFloat() {
-        return (Float) value;
+        if (value instanceof Float) {
+            return (Float) value;
+        } else if (value instanceof Number) {
+            return ((Number) value).floatValue();
+        } else {
+            throw new IllegalStateException();
+        }
+    }
+
+    public <T> T as() {
+        return (T) value;
     }
 
     public String toString() {
