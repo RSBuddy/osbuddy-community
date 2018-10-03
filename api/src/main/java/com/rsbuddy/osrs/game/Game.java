@@ -36,13 +36,14 @@ import com.rsbuddy.osrs.game.ui.Interfaces;
 import com.rsbuddy.osrs.game.world.*;
 
 import java.util.concurrent.Callable;
+import java.util.concurrent.Executor;
 
 /**
  * The primary interface through which plugins can communicate with the game client.
  * It's possible to access the other game interfaces through the {@link Game} instance,
  * but they can also be injected directly by IoC.
  */
-public interface Game {
+public interface Game extends Executor {
 
     /**
      * Runs a task on the game thread once.
