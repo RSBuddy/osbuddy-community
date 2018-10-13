@@ -1,6 +1,7 @@
 package com.rsbuddy.osrs.game;
 
 import com.rsbuddy.osrs.event.MessageEvent;
+import com.rsbuddy.osrs.game.world.Npc;
 //import com.rsbuddy.osrs.event.world.*;
 
 /**
@@ -17,8 +18,8 @@ public enum GameEvent {
 //    LOC_ADDED(LocAdded.class),
 //    LOC_UPDATED(LocUpdated.class),
 //    MAP_BUILD_END(MapBuildEnd.class),
-//    NPC_SPAWNED(NpcSpawned.class),
-//    NPC_DESPAWNED(NpcDespawned.class),
+    NPC_SPAWNED(Npc.class),
+    NPC_DESPAWNED(Npc.class),
     // ~world
 //    ATTACK_STYLE_UPDATED,
     CONTENT_TICK,
