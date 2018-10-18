@@ -112,6 +112,7 @@ public interface AnimationId {
     int MINING_MOTHERLODE_3A = 7282;
 
     int SMITHING_SMELTING = 899;
+    int SMITHING_CANNONBALL = 827;
 
     int WOODCUTTING_BRONZE = 879;
     int WOODCUTTING_IRON = 877;
