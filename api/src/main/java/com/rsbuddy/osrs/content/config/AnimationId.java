@@ -46,7 +46,10 @@ public interface AnimationId {
     int COOKING_FIRE = 897;
     int COOKING_RANGE = 896;
 
+    int CRAFTING_GLASSBLOWING = 884;
     int CRAFTING_MAKE_STAFF = 7531;
+    int CRAFTING_SPINNING = 894;
+    int CRAFTING_LEATHER = 1249;
 
     int FIREMAKING_LIGHT_LOG = 733;
 
