@@ -87,6 +87,10 @@ public interface AnimationId {
 
     int FARMING_ULTRA_COMPOST = 7699;
 
+    int MAGIC_STRING_JEWELRY = 4412;
+    int MAGIC_BAKE_PIE = 4413;
+    int MAGIC_CREATE_TABLET = 4068;
+
     int MINING_NORMAL_BRONZE = 625;
     int MINING_NORMAL_IRON = 626;
     int MINING_NORMAL_STEEL = 627;
@@ -110,6 +114,8 @@ public interface AnimationId {
     int MINING_MOTHERLODE_DRAGON_ORN = 335;
     int MINING_MOTHERLODE_INFERNAL = 4481;
     int MINING_MOTHERLODE_3A = 7282;
+
+    int PRAYER_OFFER_BONES = 3705;
 
     int SMITHING_SMELTING = 899;
     int SMITHING_CANNONBALL = 827;
