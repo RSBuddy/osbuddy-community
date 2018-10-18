@@ -79,6 +79,8 @@ public interface AnimationId {
     int HERBLORE_GRIND_TAR = 5249;
     int HERBLORE_MIX_POTION = 363;
 
+    int MAKE_ULTRA_COMPOST = 7699;
+
     int MINING_NORMAL_BRONZE = 625;
     int MINING_NORMAL_IRON = 626;
     int MINING_NORMAL_STEEL = 627;
