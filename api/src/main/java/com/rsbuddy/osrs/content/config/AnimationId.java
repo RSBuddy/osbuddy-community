@@ -79,6 +79,9 @@ public interface AnimationId {
     int FLETCHING_STRING_YEW_LONGBOW = 6688;
     int FLETCHING_STRING_MAGIC_LONGBOW = 6689;
 
+    // pestle and mortar
+    int GRIND = 364;
+
     int HERBLORE_GRIND_TAR = 5249;
     int HERBLORE_MIX_POTION = 363;
 
