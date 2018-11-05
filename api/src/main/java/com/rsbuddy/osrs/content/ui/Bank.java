@@ -51,6 +51,7 @@ public class Bank {
     public static final int PIN_IFID = 213;
 
     public static final int IFID = 12;
+    public static final int TABS_COMPONENT = 10;
     public static final int MODAL_COMPONENT = 11;
     public static final int INVENTORY_COMPONENT = 12;
     public static final int SEARCH_BUTTON_COMPONENT = 39;
