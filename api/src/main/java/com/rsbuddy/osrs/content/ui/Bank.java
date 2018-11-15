@@ -56,6 +56,7 @@ public class Bank {
     public static final int TABS_COMPONENT = 10;
     public static final int MODAL_COMPONENT = 11;
     public static final int INVENTORY_COMPONENT = 12;
+    public static final int CONTROLS_COMPONENT = 14;
     public static final int SEARCH_BUTTON_COMPONENT = 39;
     public static final int ITEM_COUNT_COMPONENT = 5;
     public static final int TITLE_COMPONENT = 4;

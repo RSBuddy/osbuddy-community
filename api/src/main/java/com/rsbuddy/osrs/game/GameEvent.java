@@ -1,5 +1,6 @@
 package com.rsbuddy.osrs.game;
 
+import com.rsbuddy.osrs.event.AttackStyleUpdated;
 import com.rsbuddy.osrs.event.MessageEvent;
 import com.rsbuddy.osrs.game.world.Npc;
 //import com.rsbuddy.osrs.event.world.*;
@@ -21,9 +22,10 @@ public enum GameEvent {
     NPC_SPAWNED(Npc.class),
     NPC_DESPAWNED(Npc.class),
     // ~world
-//    ATTACK_STYLE_UPDATED,
+    ATTACK_STYLE_UPDATED(AttackStyleUpdated.class),
     CONTENT_TICK,
     CHAT_MESSAGE(MessageEvent.class),
+    DRAW_LAYER(Integer.class),
     WIDGET_DRAW_END;
 
     // only here for verbosity
