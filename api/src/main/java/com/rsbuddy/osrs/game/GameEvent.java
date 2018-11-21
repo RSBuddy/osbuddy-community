@@ -2,6 +2,7 @@ package com.rsbuddy.osrs.game;
 
 import com.rsbuddy.osrs.event.AttackStyleUpdated;
 import com.rsbuddy.osrs.event.MessageEvent;
+import com.rsbuddy.osrs.event.SendChatMessage;
 import com.rsbuddy.osrs.game.world.Npc;
 //import com.rsbuddy.osrs.event.world.*;
 
@@ -25,6 +26,7 @@ public enum GameEvent {
     ATTACK_STYLE_UPDATED(AttackStyleUpdated.class),
     CONTENT_TICK,
     CHAT_MESSAGE(MessageEvent.class),
+    SEND_CHAT_MESSAGE(SendChatMessage.class),
     DRAW_LAYER(Integer.class),
     WIDGET_DRAW_END;
 
