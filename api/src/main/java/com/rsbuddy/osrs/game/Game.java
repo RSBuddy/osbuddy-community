@@ -37,6 +37,7 @@ import com.rsbuddy.osrs.game.world.*;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;
+import java.util.function.Function;
 
 /**
  * The primary interface through which plugins can communicate with the game client.
@@ -72,6 +73,18 @@ public interface Game extends Executor {
      * @return The execution id of the submitted task which can be cancelled with {@link Game#cancel(int)}.
      */
     int onContentTick(Callable<Boolean> task, String name);
+
+
+    /**
+     * Adds a listener for a particular type of task.
+     *
+     * @param task The callback which accepts T should return <tt>false</tt> to end execution.
+     * @param name A name for the task for profiling purposes.
+     * @return The execution id of the submitted task which can be cancelled with {@link Game#cancel(int)}.
+     *
+     * Note: It's important to only use whichever class is specified in the type parameter's {@link GameEvent#clazz}, or Object if one is not specified as the parameter will simply be null.
+     */
+    <T> int onGameEvent(GameEvent type, Function<T, Boolean> task, String name);
 
     /**
      * Cancels a task
