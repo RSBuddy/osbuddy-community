@@ -57,6 +57,7 @@ public class Bank {
     public static final int INVENTORY_COMPONENT = 13;
     public static final int CONTROLS_COMPONENT = 15;
     public static final int SEARCH_BUTTON_COMPONENT = 40;
+    public static final int INCINERATOR_COMPONENT = 46; // enable via the bank settings
     public static final int ITEM_COUNT_COMPONENT = 5;
     public static final int TITLE_COMPONENT = 4;
     public static final int TAB_SEPARATOR_CHILD = 800;
