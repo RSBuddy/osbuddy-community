@@ -1,6 +1,7 @@
 package com.rsbuddy.osrs.game;
 
 import com.rsbuddy.osrs.event.AttackStyleUpdated;
+import com.rsbuddy.osrs.event.ChatShortcut;
 import com.rsbuddy.osrs.event.MessageEvent;
 import com.rsbuddy.osrs.event.SendChatMessage;
 import com.rsbuddy.osrs.game.world.Npc;
@@ -27,10 +28,10 @@ public enum GameEvent {
     CONTENT_TICK,
     CHAT_MESSAGE(MessageEvent.class),
     SEND_CHAT_MESSAGE(SendChatMessage.class),
+    CHAT_SHORTCUT(ChatShortcut.class),
     DRAW_LAYER(Integer.class),
     WIDGET_DRAW_END;
 
-    // only here for verbosity
     private Class<?> clazz;
 
     GameEvent(Class<?> clazz) {
