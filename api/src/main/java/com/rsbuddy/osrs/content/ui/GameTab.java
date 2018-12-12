@@ -31,20 +31,24 @@
 package com.rsbuddy.osrs.content.ui;
 
 public enum GameTab {
+    NONE(-1),
+    COMBAT(0),
+    STATS(1),
+    JOURNAL(2),
+    INVENTORY(3),
+    EQUIPMENT(4),
+    PRAYER(5),
+    MAGIC(6),
+    FRIENDS(9),
+    ACCOUNT_MANAGEMENT(8),
+    CLAN_CHAT(7),
+    OPTIONS(11),
+    EMOTES(12),
+    MUSIC(13);
 
-    NONE,
-    COMBAT,
-    STATS,
-    JOURNAL,
-    INVENTORY,
-    EQUIPMENT,
-    PRAYER,
-    MAGIC,
-    FRIENDS,
-    ACCOUNT_MANAGEMENT,
-    CLAN_CHAT,
-    OPTIONS,
-    EMOTES,
-    MUSIC
+    public final int value;
 
+    GameTab(int value) {
+        this.value = value;
+    }
 }
