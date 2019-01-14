@@ -4,23 +4,29 @@ import com.google.common.base.Preconditions;
 import com.rsbuddy.osrs.game.world.Item;
 import com.rsbuddy.osrs.game.world.Tile;
 
+import java.time.Duration;
 import java.util.Set;
 
 public class LootReceived {
     private final Source source;
-    private final int npcId;
-    private final String playerName;
-    private final String bossName;
     private final Tile location;
     private final Set<Item> items;
 
-    public LootReceived(Source source, int npcId, String playerName, String bossName, Tile location, Set<Item> items) {
+    // metadata
+    // some of the below fields are only relevant with certain sources
+    private final int npcId;
+    private final String playerName;
+    private final String bossName;
+    private final Duration killTime;
+
+    public LootReceived(Source source, Tile location, Set<Item> items, int npcId, String playerName, String bossName, Duration killTime) {
         this.source = source;
+        this.location = location;
+        this.items = items;
         this.npcId = npcId;
         this.playerName = playerName;
         this.bossName = bossName;
-        this.location = location;
-        this.items = items;
+        this.killTime = killTime;
     }
 
     public Source source() {
@@ -40,6 +46,14 @@ public class LootReceived {
     public String bossName() {
         Preconditions.checkState(source == Source.BOSS);
         return bossName;
+    }
+
+    public Duration killTime() {
+        return killTime;
+    }
+
+    public int killTimeSeconds() {
+        return (int) killTime.getSeconds();
     }
 
     public Tile location() {
