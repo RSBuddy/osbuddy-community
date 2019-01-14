@@ -1,15 +1,15 @@
 package com.rsbuddy.osrs.content.config;
 
-public class VarbitId {
+public class VarcId {
     public final int index;
 
-    public VarbitId(int index) {
+    public VarcId(int index) {
         this.index = index;
     }
 
     @Override
     public String toString() {
-        return "Varbit{" +
+        return "VarcId{" +
                 "index=" + index +
                 '}';
     }

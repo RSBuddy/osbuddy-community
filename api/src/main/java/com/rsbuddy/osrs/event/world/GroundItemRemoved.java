@@ -36,13 +36,11 @@ package com.rsbuddy.osrs.event.world;
  * @author Shivam
  */
 public class GroundItemRemoved {
-
     public final int x;
     public final int y;
     public final int floor;
 
     public GroundItemRemoved(final int x, final int y, final int floor) {
-
         this.x = x;
         this.y = y;
         this.floor = floor;

@@ -36,6 +36,8 @@ import java.util.function.Predicate;
 public interface Npcs {
     Npc get(final Predicate<Npc> predicate);
 
+    Npc getAtIndex(int npcIndex);
+
     Collection<Npc> loaded(final Predicate<Npc> predicate);
 
     Collection<Npc> loadedById(final Predicate<Integer> predicate);
@@ -45,6 +47,8 @@ public interface Npcs {
     Collection<Npc> loadedReflect(final Predicate<Object> predicate);
 
     Collection<Npc> loaded();
+
+    String name(int npcId);
 
     /**
      * Attempt to find the max health of an {@link Npc} by it's id.

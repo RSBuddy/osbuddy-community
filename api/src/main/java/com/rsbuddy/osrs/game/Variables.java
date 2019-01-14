@@ -31,14 +31,26 @@
 package com.rsbuddy.osrs.game;
 
 import com.rsbuddy.osrs.content.config.VarbitId;
+import com.rsbuddy.osrs.content.config.Varc$Id;
+import com.rsbuddy.osrs.content.config.VarcId;
+import com.rsbuddy.osrs.content.config.VarpId;
 
 public interface Variables {
+    int get(VarpId var);
+    void set(VarpId var, int val);
 
-    Varbit varbit(final VarbitId id);
+    int get(VarbitId var);
+    void set(VarbitId var, int val);
 
-    Varbit varbit(final int id);
+    int get(VarcId var);
+    void set(VarcId var, int val);
+
+    String get(Varc$Id var);
+    void set(Varc$Id var, String val);
 
     int[] varps();
 
     int varp(int index);
+
+    int varbit(int index);
 }

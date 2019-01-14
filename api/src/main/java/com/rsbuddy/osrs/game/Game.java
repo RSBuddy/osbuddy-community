@@ -281,4 +281,12 @@ public interface Game extends Executor {
 
     int canvasHeight();
 
+    void addMenuEntry(int actionParam0, int actionParam1, int typeId, int targetId, String action, String option);
+
+    void swapMenuEntries(int index0, int index1);
+
+    void duplicateMenuEntry(int index);
+
+    void removeMenuEntry(int index);
+
 }
