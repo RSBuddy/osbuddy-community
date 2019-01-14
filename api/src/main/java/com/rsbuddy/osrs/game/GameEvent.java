@@ -4,6 +4,7 @@ import com.rsbuddy.osrs.event.*;
 import com.rsbuddy.osrs.event.world.GroundItemRemoved;
 import com.rsbuddy.osrs.event.world.GroundItemUpdated;
 import com.rsbuddy.osrs.game.world.GroundItem;
+import com.rsbuddy.osrs.game.world.Loot;
 import com.rsbuddy.osrs.game.world.Npc;
 //import com.rsbuddy.osrs.event.world.*;
 
@@ -23,7 +24,7 @@ public enum GameEvent {
 //    MAP_BUILD_END(MapBuildEnd.class),
     NPC_SPAWNED(Npc.class),
     NPC_DESPAWNED(Npc.class),
-    LOOT_RECEIVED(LootReceived.class),
+    LOOT_RECEIVED(Loot.class),
     // ~world
     ATTACK_STYLE_UPDATED(AttackStyleUpdated.class),
     CONTENT_TICK,

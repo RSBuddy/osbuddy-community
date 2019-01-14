@@ -1,13 +1,11 @@
-package com.rsbuddy.osrs.event;
+package com.rsbuddy.osrs.game.world;
 
 import com.google.common.base.Preconditions;
-import com.rsbuddy.osrs.game.world.Item;
-import com.rsbuddy.osrs.game.world.Tile;
 
 import java.time.Duration;
 import java.util.Set;
 
-public class LootReceived {
+public class Loot {
     private final Source source;
     private final Tile location;
     private final Set<Item> items;
@@ -19,7 +17,7 @@ public class LootReceived {
     private final String bossName;
     private final Duration killTime;
 
-    public LootReceived(Source source, Tile location, Set<Item> items, int npcId, String playerName, String bossName, Duration killTime) {
+    public Loot(Source source, Tile location, Set<Item> items, int npcId, String playerName, String bossName, Duration killTime) {
         this.source = source;
         this.location = location;
         this.items = items;

@@ -144,6 +144,14 @@ public interface Game extends Executor {
     GroundItems items();
 
     /**
+     * An object to interact with loot events.
+     *
+     * @return An object to interact with loot events.
+     * */
+
+    LootManager loot();
+
+    /**
      * An object to access the context-sensitive right click menu ("mini-menu").
      * 
      * @return An object to access the minimenu.
