@@ -3,32 +3,47 @@ package com.rsbuddy.osrs.game.world;
 import com.google.common.base.Preconditions;
 
 import java.time.Duration;
+import java.time.Instant;
 import java.util.Set;
 
 public class Loot {
     private final Source source;
     private final Tile location;
     private final Set<Item> items;
+    private final Instant time;
 
     // metadata
     // some of the below fields are only relevant with certain sources
     private final int npcId;
+    private final String npcName;
     private final String playerName;
-    private final String bossName;
     private final Duration killTime;
 
-    public Loot(Source source, Tile location, Set<Item> items, int npcId, String playerName, String bossName, Duration killTime) {
+    public Loot(Source source, Tile location, Set<Item> items, Instant time, int npcId, String npcName, String playerName, Duration killTime) {
         this.source = source;
         this.location = location;
         this.items = items;
+        this.time = time;
         this.npcId = npcId;
+        this.npcName = npcName;
         this.playerName = playerName;
-        this.bossName = bossName;
         this.killTime = killTime;
     }
 
     public Source source() {
         return source;
+    }
+
+    public Tile location() {
+        return location;
+    }
+
+    public Set<Item> items() {
+        return items;
+    }
+
+    public Instant time() {
+        return time;
     }
 
     public int npcId() {
@@ -41,9 +56,9 @@ public class Loot {
         return playerName;
     }
 
-    public String bossName() {
-        Preconditions.checkState(source == Source.BOSS);
-        return bossName;
+    public String npcName() {
+        Preconditions.checkState(source == Source.BOSS || source == Source.NPC);
+        return npcName;
     }
 
     public Duration killTime() {
@@ -52,14 +67,6 @@ public class Loot {
 
     public int killTimeSeconds() {
         return (int) killTime.getSeconds();
-    }
-
-    public Tile location() {
-        return location;
-    }
-
-    public Set<Item> items() {
-        return items;
     }
 
     public enum Source {
