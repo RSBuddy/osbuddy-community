@@ -1,11 +1,15 @@
 package com.rsbuddy.osrs.game;
 
-import com.rsbuddy.osrs.event.*;
+import com.rsbuddy.osrs.event.AttackStyleUpdated;
+import com.rsbuddy.osrs.event.ChatShortcut;
+import com.rsbuddy.osrs.event.MessageEvent;
+import com.rsbuddy.osrs.event.SendChatMessage;
 import com.rsbuddy.osrs.event.world.GroundItemRemoved;
 import com.rsbuddy.osrs.event.world.GroundItemUpdated;
 import com.rsbuddy.osrs.game.world.GroundItem;
 import com.rsbuddy.osrs.game.world.Loot;
 import com.rsbuddy.osrs.game.world.Npc;
+import com.rsbuddy.osrs.game.world.Player;
 //import com.rsbuddy.osrs.event.world.*;
 
 /**
@@ -13,17 +17,14 @@ import com.rsbuddy.osrs.game.world.Npc;
  * */
 
 public enum GameEvent {
-    // uncommented as they are implemented
     // world
-//    ANIMATION_CHANGED(AnimationChanged.class),
     GROUND_ITEM_SPAWNED(GroundItem.class),
     GROUND_ITEM_UPDATED(GroundItemUpdated.class),
     GROUND_ITEM_REMOVED(GroundItemRemoved.class),
-//    LOC_ADDED(LocAdded.class),
-//    LOC_UPDATED(LocUpdated.class),
-//    MAP_BUILD_END(MapBuildEnd.class),
     NPC_SPAWNED(Npc.class),
     NPC_DESPAWNED(Npc.class),
+    PLAYER_SPAWNED(Player.class),
+    PLAYER_DESPAWNED(Player.class),
     LOOT_RECEIVED(Loot.class),
     // ~world
     ATTACK_STYLE_UPDATED(AttackStyleUpdated.class),
