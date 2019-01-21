@@ -24,6 +24,7 @@ public enum GameEvent {
     PLAYER_DESPAWNED(Player.class),
     LOOT_RECEIVED(Loot.class),
     LOCATION_CREATED(Location.class),
+    LOCATION_REMOVED(Location.class),
     // ~world
     ATTACK_STYLE_UPDATED(AttackStyleUpdated.class),
     CONTENT_TICK,
