@@ -116,6 +116,14 @@ public class MenuClickedEvent {
         return actionParam1;
     }
 
+    public int ifId() {
+        return actionParam1 >> 16;
+    }
+
+    public int componentId() {
+        return actionParam1 & 0xffff;
+    }
+
     public String toString() {
         return "MenuClickedEvent{" +
                 "target=" + target +
