@@ -6,10 +6,7 @@ import com.rsbuddy.osrs.event.MessageEvent;
 import com.rsbuddy.osrs.event.SendChatMessage;
 import com.rsbuddy.osrs.event.world.GroundItemRemoved;
 import com.rsbuddy.osrs.event.world.GroundItemUpdated;
-import com.rsbuddy.osrs.game.world.GroundItem;
-import com.rsbuddy.osrs.game.world.Loot;
-import com.rsbuddy.osrs.game.world.Npc;
-import com.rsbuddy.osrs.game.world.Player;
+import com.rsbuddy.osrs.game.world.*;
 //import com.rsbuddy.osrs.event.world.*;
 
 /**
@@ -26,6 +23,7 @@ public enum GameEvent {
     PLAYER_SPAWNED(Player.class),
     PLAYER_DESPAWNED(Player.class),
     LOOT_RECEIVED(Loot.class),
+    LOCATION_CREATED(Location.class),
     // ~world
     ATTACK_STYLE_UPDATED(AttackStyleUpdated.class),
     CONTENT_TICK,
