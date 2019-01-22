@@ -40,13 +40,13 @@ public interface Plugin {
      *
      * @param ctx The context which this plugin can use to query OSBuddy.
      */
-    void init(PluginContext ctx);
+    default void init(PluginContext ctx) {}
 
     /**
      * Called when this plugin is turned off.
      *
      * @param ctx The context which this plugin can use to query OSBuddy.
      */
-    void dispose(PluginContext ctx);
+    default void dispose(PluginContext ctx) {}
 
 }
