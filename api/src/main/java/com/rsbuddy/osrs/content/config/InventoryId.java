@@ -37,6 +37,7 @@ public enum InventoryId {
     EQUIPMENT(94),
     BANK(95),
     CLUE_PUZZLE(140),
+    BARROWS(141),
     MM_PUZZLE(221),
     DUEL_SPOILS(541),
     GE_COLLECT_SLOT_1(518),
