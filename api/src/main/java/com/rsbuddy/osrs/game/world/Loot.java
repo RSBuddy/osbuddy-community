@@ -19,7 +19,11 @@ public class Loot {
     private final String playerName;
     private final Duration killTime;
 
-    public Loot(Source source, Tile location, Set<Item> items, Instant time, int npcId, String npcName, String playerName, Duration killTime) {
+    // barrows
+    private final int killCount;
+    private final int rewardPotential;
+
+    public Loot(Source source, Tile location, Set<Item> items, Instant time, int npcId, String npcName, String playerName, Duration killTime, int killCount, int rewardPotential) {
         this.source = source;
         this.location = location;
         this.items = items;
@@ -28,6 +32,8 @@ public class Loot {
         this.npcName = npcName;
         this.playerName = playerName;
         this.killTime = killTime;
+        this.killCount = killCount;
+        this.rewardPotential = rewardPotential;
     }
 
     public Source source() {
@@ -69,11 +75,20 @@ public class Loot {
         return (int) killTime.getSeconds();
     }
 
+    public int killCount() {
+        return killCount;
+    }
+
+    public int rewardPotential() {
+        return rewardPotential;
+    }
+
     public enum Source {
         NPC,
         BOSS,
         BOSS_PET,
         PLAYER,
-        DUEL_WON
+        DUEL_WON,
+        BARROWS
     }
 }
