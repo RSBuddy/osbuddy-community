@@ -1,9 +1,6 @@
 package com.rsbuddy.osrs.game;
 
-import com.rsbuddy.osrs.event.AttackStyleUpdated;
-import com.rsbuddy.osrs.event.ChatShortcut;
-import com.rsbuddy.osrs.event.MessageEvent;
-import com.rsbuddy.osrs.event.SendChatMessage;
+import com.rsbuddy.osrs.event.*;
 import com.rsbuddy.osrs.event.world.GroundItemRemoved;
 import com.rsbuddy.osrs.event.world.GroundItemUpdated;
 import com.rsbuddy.osrs.game.world.*;
@@ -32,6 +29,8 @@ public enum GameEvent {
     SEND_CHAT_MESSAGE(SendChatMessage.class),
     CHAT_SHORTCUT(ChatShortcut.class),
     DRAW_LAYER(Integer.class),
+    SKILL_UPDATED(SkillUpdated.class),
+    WIDGET_UPDATED(Integer.class),
     WIDGET_DRAW_END;
 
     private Class<?> clazz;
