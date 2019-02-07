@@ -221,6 +221,7 @@ public interface Game extends Executor {
 
     boolean welcomeScreen();
 
+    // 1/50th of a second
     int time();
 
     int energy();
