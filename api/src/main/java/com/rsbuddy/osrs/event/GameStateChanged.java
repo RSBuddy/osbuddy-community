@@ -30,21 +30,23 @@
 
 package com.rsbuddy.osrs.event;
 
+import com.rsbuddy.osrs.game.GameState;
+
 public class GameStateChanged {
 
-    private int newState;
-    private int oldState;
+    private GameState newState;
+    private GameState oldState;
 
-    public GameStateChanged(int newState, int oldState) {
+    public GameStateChanged(final GameState newState, final GameState oldState) {
         this.newState = newState;
         this.oldState = oldState;
     }
 
-    public int newState() {
+    public GameState newState() {
         return newState;
     }
 
-    public int oldState() {
+    public GameState oldState() {
         return oldState;
     }
 
