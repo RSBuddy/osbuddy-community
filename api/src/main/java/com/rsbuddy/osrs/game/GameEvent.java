@@ -62,7 +62,9 @@ public enum GameEvent {
     SKILL_UPDATED(SkillUpdated.class),
     WIDGET_UPDATED(Integer.class),
     WIDGET_DRAW_END,
-    GAME_STATE_CHANGED(GameStateChanged.class);
+    GAME_STATE_CHANGED(GameStateChanged.class),
+    MAP_REGIONS_CHANGED(MapRegionsChanged.class),
+    RENDER_TILE(Tile.class);
 
     private Class<?> clazz;
 
