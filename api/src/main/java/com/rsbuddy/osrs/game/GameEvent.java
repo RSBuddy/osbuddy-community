@@ -59,19 +59,31 @@ public enum GameEvent {
     SEND_CHAT_MESSAGE(SendChatMessage.class),
     CHAT_SHORTCUT(ChatShortcut.class),
     DRAW_LAYER(Integer.class),
+    RENDER_TILE(Tile.class),
     SKILL_UPDATED(SkillUpdated.class),
+    XP_DROP_CREATED(Integer.class),
     WIDGET_UPDATED(Integer.class),
     WIDGET_DRAW_END,
-    GAME_STATE_CHANGED(GameStateChanged.class),
-    MAP_REGIONS_CHANGED(MapRegionsChanged.class),
-    RENDER_TILE(Tile.class);
+    GAME_STATE_CHANGED(false, GameStateChanged.class),
+    MAP_REGIONS_CHANGED(MapRegionsChanged.class);
 
-    private Class<?> clazz;
+    private final boolean loginCheck;
+    private final Class<?> clazz;
 
-    GameEvent(Class<?> clazz) {
+    GameEvent(boolean loginCheck, Class<?> clazz) {
+        this.loginCheck = loginCheck;
         this.clazz = clazz;
     }
 
+    GameEvent(Class<?> clazz) {
+        this(true, clazz);
+    }
+
     GameEvent() {
+        this(true, null);
+    }
+
+    public boolean loginCheck() {
+        return loginCheck;
     }
 }
