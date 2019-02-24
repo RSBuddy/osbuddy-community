@@ -12,8 +12,7 @@ repositories {
 }
 
 dependencies {
-    compile files(System.getProperty("user.home") + '/OSBuddy/loader.jar')
-    compile files('../../api/build/libs/api-1.0.jar')
+    compile files('../../api/build/libs/api-1.1.jar')
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.6.6'
     compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.0.9'
     compile group: 'com.google.guava', name: 'guava', version: '25.0-jre'
