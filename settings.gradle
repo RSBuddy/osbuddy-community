@@ -1,2 +1,2 @@
 include 'api'
-include 'example'
+include 'plugins:example'
