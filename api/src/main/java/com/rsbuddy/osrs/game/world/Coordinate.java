@@ -31,9 +31,8 @@
 package com.rsbuddy.osrs.game.world;
 
 /**
- * @name: Coordinate
- * @author: David
- * @version: 1.0
+ * @author David
+ * @version 1.0
  */
 public class Coordinate {
     //The floor level of the coordinate
