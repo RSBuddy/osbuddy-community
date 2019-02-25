@@ -1,2 +1,1 @@
-include 'api'
-include 'plugins:example'
+include 'api', 'plugins:example'
