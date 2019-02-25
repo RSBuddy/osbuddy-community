@@ -12,8 +12,8 @@ Make sure you have run OSBuddy so that you have an OSBuddy folder in your user d
 
 To run your plugin (we recommend launching in Debug mode). Edit configurations to add a new Application with the main class com.osbuddy.loader.Loader with the following VM arguments:
 ```
--Dplugin-classpath=out/production/classes
--Dplugin-resources=out/production/resources
+-Dplugin-classpath=$PROJECT_DIR$/plugins/example/out/production/classes
+-Dplugin-resources=$PROJECT_DIR$/plugins/example/out/production/resources
 -Dnofork=true
 -Ddev=true
 -Xmx512m
