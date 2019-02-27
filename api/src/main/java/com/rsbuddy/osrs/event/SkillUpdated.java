@@ -13,6 +13,18 @@ public class SkillUpdated {
         this.newExperience = newExperience;
     }
 
+    public Skill skill() {
+        return skill;
+    }
+
+    public int oldExperience() {
+        return oldExperience;
+    }
+
+    public int newExperience() {
+        return newExperience;
+    }
+
     @Override
     public String toString() {
         return "SkillUpdated{" +
