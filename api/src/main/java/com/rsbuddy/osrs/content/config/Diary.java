@@ -44,29 +44,32 @@ public enum Diary {
     WESTERN(4471, 4472, 4473, 4474),
     WILDERNESS(4466, 4467, 4468, 4469);
 
-    private final int[] varbits;
+    private final VarbitId[] varbits;
 
     Diary(int... varbits) {
-        this.varbits = varbits;
+        this.varbits = new VarbitId[varbits.length];
+        for (int i = 0; i < varbits.length; ++i) {
+            this.varbits[i] = new VarbitId(varbits[i]);
+        }
     }
 
-    public int easy() {
+    public VarbitId easy() {
         return varbits[0];
     }
 
-    public int medium() {
+    public VarbitId medium() {
         return varbits[1];
     }
 
-    public int hard() {
+    public VarbitId hard() {
         return varbits[2];
     }
 
-    public int elite() {
+    public VarbitId elite() {
         return varbits[3];
     }
 
-    public int[] varbits() {
+    public VarbitId[] varbits() {
         return varbits;
     }
 
