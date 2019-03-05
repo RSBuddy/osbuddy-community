@@ -50,7 +50,13 @@ public enum AccountType {
     /**
      * Hardcore ironman
      */
-    HARDCORE_IRONMAN;
+    HARDCORE_IRONMAN,
+
+    /**
+     * Unknown account type. This will only be used if the account type cannot
+     * be determined, or if a new account type is added.
+     */
+    UNKNOWN;
 
     /**
      * Checks whether this type is Normal.
@@ -74,6 +80,10 @@ public enum AccountType {
                 return true;
         }
         return false;
+    }
+
+    public boolean unknown() {
+        return this == UNKNOWN;
     }
 
 }
