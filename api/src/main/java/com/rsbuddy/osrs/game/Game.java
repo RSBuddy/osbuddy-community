@@ -30,6 +30,7 @@
 
 package com.rsbuddy.osrs.game;
 
+import com.rsbuddy.osrs.content.config.AccountType;
 import com.rsbuddy.osrs.game.chat.*;
 import com.rsbuddy.osrs.game.config.Configs;
 import com.rsbuddy.osrs.game.ui.Interfaces;
@@ -297,5 +298,12 @@ public interface Game extends Executor {
     void duplicateMenuEntry(int index);
 
     void removeMenuEntry(int index);
+
+    /**
+     * Gets the {@link AccountType} for the currently logged in player.
+     *
+     * @return The player's {@code AccountType}
+     */
+    AccountType accountType();
 
 }
