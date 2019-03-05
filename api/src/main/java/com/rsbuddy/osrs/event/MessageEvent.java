@@ -72,6 +72,10 @@ public class MessageEvent {
                 (flags == PM_SENT) || (flags == PM_RECEIVE_MOD);
     }
 
+    public boolean privateMessageReceived() {
+        return flags == PM_RECEIVE || flags == PM_RECEIVE_MOD;
+    }
+
     public boolean clan() {
         return flags == CLAN;
     }
