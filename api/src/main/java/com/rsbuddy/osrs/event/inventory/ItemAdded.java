@@ -70,4 +70,12 @@ public class ItemAdded extends ItemChanged {
     public boolean newAddition() {
         return newAddition;
     }
+
+    @Override
+    public String toString() {
+        return "ItemAdded{" +
+                "increaseAmount=" + increaseAmount +
+                ", newAddition=" + newAddition +
+                '}';
+    }
 }

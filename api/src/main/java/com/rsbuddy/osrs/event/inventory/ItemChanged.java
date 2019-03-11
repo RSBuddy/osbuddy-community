@@ -103,4 +103,14 @@ public class ItemChanged {
     public enum Type {
         ADDED, REMOVED, MOVED
     }
+
+    @Override
+    public String toString() {
+        return "ItemChanged{" +
+                "slot=" + slot +
+                ", currentItem=" + currentItem +
+                ", previousItem=" + previousItem +
+                ", type=" + type +
+                '}';
+    }
 }

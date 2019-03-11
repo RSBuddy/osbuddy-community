@@ -30,22 +30,23 @@
 
 package com.rsbuddy.osrs.event.inventory;
 
-public class InventoryUpdated {
+import com.rsbuddy.osrs.content.config.InventoryId;
 
-    private final int inventoryId;
+public class InventoryUpdated {
+    private final InventoryId inventoryId;
     private final int index;
     private final int itemId;
     private final int stackSize;
 
 
-    public InventoryUpdated(final int inventoryId, final int index, final int itemId, final int stackSize) {
+    public InventoryUpdated(final InventoryId inventoryId, final int index, final int itemId, final int stackSize) {
         this.inventoryId = inventoryId;
         this.index = index;
         this.itemId = itemId;
         this.stackSize = stackSize;
     }
 
-    public int inventoryId() {
+    public InventoryId inventoryId() {
         return inventoryId;
     }
 
@@ -59,5 +60,15 @@ public class InventoryUpdated {
 
     public int stackSize() {
         return stackSize;
+    }
+
+    @Override
+    public String toString() {
+        return "InventoryUpdated{" +
+                "inventoryId=" + inventoryId +
+                ", index=" + index +
+                ", itemId=" + itemId +
+                ", stackSize=" + stackSize +
+                '}';
     }
 }

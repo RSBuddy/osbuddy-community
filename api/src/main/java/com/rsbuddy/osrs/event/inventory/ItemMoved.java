@@ -59,4 +59,11 @@ public class ItemMoved extends ItemChanged {
     public InventoryItem.Slot previousSlot() {
         return previousSlot;
     }
+
+    @Override
+    public String toString() {
+        return "ItemMoved{" +
+                "previousSlot=" + previousSlot +
+                '}';
+    }
 }

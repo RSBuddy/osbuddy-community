@@ -33,9 +33,9 @@ package com.rsbuddy.osrs.event.inventory;
 import java.util.List;
 
 /**
- * An event that stores all of the changes to the inventory.
+ * An event that stores all of the changes to the backpack.
  */
-public final class InventoryChanged {
+public final class BackpackChanged {
     /**
      * A list of events for items added to the inventory.
      */
@@ -52,14 +52,14 @@ public final class InventoryChanged {
     private final List<ItemChanged> replacedEvents;
 
     /**
-     * Creates a new InventoryChanged event.
+     * Creates a new BackpackChanged event.
      *
      * @param addedEvents   the events for items added to the inventory.
      * @param removedEvents the events for items removed from the inventory.
      * @param movedEvents   the events for items moved within the inventory.
      */
-    public InventoryChanged(List<ItemAdded> addedEvents, List<ItemRemoved> removedEvents,
-                            List<ItemMoved> movedEvents, List<ItemChanged> replacedEvents) {
+    public BackpackChanged(List<ItemAdded> addedEvents, List<ItemRemoved> removedEvents,
+                           List<ItemMoved> movedEvents, List<ItemChanged> replacedEvents) {
         this.addedEvents = addedEvents;
         this.removedEvents = removedEvents;
         this.movedEvents = movedEvents;
@@ -91,4 +91,13 @@ public final class InventoryChanged {
         return replacedEvents;
     }
 
+    @Override
+    public String toString() {
+        return "BackpackChanged{" +
+                "addedEvents=" + addedEvents +
+                ", removedEvents=" + removedEvents +
+                ", movedEvents=" + movedEvents +
+                ", replacedEvents=" + replacedEvents +
+                '}';
+    }
 }

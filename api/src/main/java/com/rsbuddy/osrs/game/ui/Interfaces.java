@@ -32,7 +32,7 @@ package com.rsbuddy.osrs.game.ui;
 
 import com.rsbuddy.osrs.content.ui.GameTab;
 
-import java.awt.Rectangle;
+import java.awt.*;
 import java.util.List;
 
 public interface Interfaces {
@@ -43,7 +43,7 @@ public interface Interfaces {
 
     Rectangle minimapBounds();
 
-    InventoryItem[] inventory();
+    InventoryItem[] backpack();
 
     List<Component> roots(final int ifId);
 
