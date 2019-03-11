@@ -91,4 +91,13 @@ public final class BackpackChanged {
         return replacedEvents;
     }
 
+    @Override
+    public String toString() {
+        return "BackpackChanged{" +
+                "addedEvents=" + addedEvents +
+                ", removedEvents=" + removedEvents +
+                ", movedEvents=" + movedEvents +
+                ", replacedEvents=" + replacedEvents +
+                '}';
+    }
 }

@@ -61,4 +61,14 @@ public class InventoryUpdated {
     public int stackSize() {
         return stackSize;
     }
+
+    @Override
+    public String toString() {
+        return "InventoryUpdated{" +
+                "inventoryId=" + inventoryId +
+                ", index=" + index +
+                ", itemId=" + itemId +
+                ", stackSize=" + stackSize +
+                '}';
+    }
 }

@@ -70,4 +70,12 @@ public class ItemRemoved extends ItemChanged {
     public boolean fullyRemoved() {
         return fullyRemoved;
     }
+
+    @Override
+    public String toString() {
+        return "ItemRemoved{" +
+                "decreaseAmount=" + decreaseAmount +
+                ", fullyRemoved=" + fullyRemoved +
+                '}';
+    }
 }
