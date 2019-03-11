@@ -31,6 +31,7 @@
 package com.rsbuddy.osrs.game;
 
 import com.rsbuddy.osrs.event.*;
+import com.rsbuddy.osrs.event.inventory.InventoryUpdated;
 import com.rsbuddy.osrs.event.world.GroundItemRemoved;
 import com.rsbuddy.osrs.event.world.GroundItemUpdated;
 import com.rsbuddy.osrs.game.world.*;
@@ -65,7 +66,8 @@ public enum GameEvent {
     WIDGET_UPDATED(Integer.class),
     WIDGET_DRAW_END,
     GAME_STATE_CHANGED(false, GameStateChanged.class),
-    MAP_REGIONS_CHANGED(MapRegionsChanged.class);
+    MAP_REGIONS_CHANGED(MapRegionsChanged.class),
+    INVENTORY_UPDATED(InventoryUpdated.class);
 
     private final boolean loginCheck;
     private final Class<?> clazz;
