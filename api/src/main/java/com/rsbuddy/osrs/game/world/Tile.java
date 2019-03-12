@@ -32,34 +32,64 @@ package com.rsbuddy.osrs.game.world;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Objects;
+
 public class Tile implements Locatable {
 
+    @SerializedName("bx")
+    private final int baseX;
+
+    @SerializedName("by")
+    private final int baseY;
+
     @SerializedName("x")
-    private final int x;
+    private final int localX;
 
     @SerializedName("y")
-    private final int y;
+    private final int localY;
 
     @SerializedName("floor")
     private final int floor;
     private Tile lastApplied = null;
 
-    public Tile(int x, int y, int floor) {
-        this.x = x;
-        this.y = y;
+    public Tile(int baseX, int baseY, int localX, int localY, int floor) {
+        this.baseX = baseX;
+        this.baseY = baseY;
+        this.localX = localX;
+        this.localY = localY;
         this.floor = floor;
+    }
+
+    public Tile(int localX, int localY, int floor) {
+        this(0, 0, localX, localY, floor);
     }
 
     public Tile(int x, int y) {
         this(x, y, 0);
     }
 
+    public int baseX() {
+        return baseX;
+    }
+
+    public int baseY() {
+        return baseY;
+    }
+
+    public int localX() {
+        return localX;
+    }
+
+    public int localY() {
+        return localY;
+    }
+
     public int x() {
-        return x;
+        return baseX + localX;
     }
 
     public int y() {
-        return y;
+        return baseY + localY;
     }
 
     public int floor() {
@@ -80,42 +110,44 @@ public class Tile implements Locatable {
             // 2048 is the total rotation
             // want to make it 8 possible directions
             Tile resolvedTile = this;
+            int bx = resolvedTile.baseX, by = resolvedTile.baseY;
+            int lx = resolvedTile.localX, ly = resolvedTile.localY;
             int realAngle = Math.round(angle / 256f);
             switch (realAngle) {
                 case 0: {
-                    resolvedTile = new Tile(resolvedTile.x, resolvedTile.y - 1, resolvedTile.floor);
+                    resolvedTile = new Tile(bx, by, lx, ly - 1, resolvedTile.floor);
                     break;
                 }
                 case 1: {
-                    resolvedTile = new Tile(resolvedTile.x - 1, resolvedTile.y - 1, resolvedTile.floor);
+                    resolvedTile = new Tile(bx, by, lx - 1, ly - 1, resolvedTile.floor);
                     break;
                 }
                 case 2: {
-                    resolvedTile = new Tile(resolvedTile.x - 1, resolvedTile.y, resolvedTile.floor);
+                    resolvedTile = new Tile(bx, by, lx - 1, ly, resolvedTile.floor);
                     break;
                 }
                 case 3: {
-                    resolvedTile = new Tile(resolvedTile.x - 1, resolvedTile.y + 1, resolvedTile.floor);
+                    resolvedTile = new Tile(bx, by, lx - 1, ly + 1, resolvedTile.floor);
                     break;
                 }
                 case 4: {
-                    resolvedTile = new Tile(resolvedTile.x, resolvedTile.y + 1, resolvedTile.floor);
+                    resolvedTile = new Tile(lx, ly + 1, resolvedTile.floor);
                     break;
                 }
                 case 5: {
-                    resolvedTile = new Tile(resolvedTile.x + 1, resolvedTile.y + 1, resolvedTile.floor);
+                    resolvedTile = new Tile(lx + 1, ly + 1, resolvedTile.floor);
                     break;
                 }
                 case 6: {
-                    resolvedTile = new Tile(resolvedTile.x + 1, resolvedTile.y, resolvedTile.floor);
+                    resolvedTile = new Tile(lx + 1, ly, resolvedTile.floor);
                     break;
                 }
                 case 7: {
-                    resolvedTile = new Tile(resolvedTile.x + 1, resolvedTile.y - 1, resolvedTile.floor);
+                    resolvedTile = new Tile(lx + 1, ly - 1, resolvedTile.floor);
                     break;
                 }
                 case 8: {
-                    resolvedTile = new Tile(resolvedTile.x, resolvedTile.y - 1, resolvedTile.floor);
+                    resolvedTile = new Tile(lx, ly - 1, resolvedTile.floor);
                     break;
                 }
             }
@@ -125,37 +157,36 @@ public class Tile implements Locatable {
         return lastApplied;
     }
 
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Tile tile = (Tile) o;
-        return floor == tile.floor && x == tile.x && y == tile.y;
-    }
-
-    public boolean equals(final int x, final int y, final int floor) {
-        return this.x == x && this.y == y && this.floor == floor;
-    }
-
     public int distanceTo(int x, int y) {
-        return (int) Math.sqrt(Math.pow(x - this.x, 2) + Math.pow(y - this.y, 2));
+        return (int) Math.sqrt(Math.pow(x - this.x(), 2) + Math.pow(y - this.y(), 2));
     }
 
     public int distanceTo(Tile tile) {
-        return distanceTo(tile.x, tile.y);
+        return distanceTo(tile.x(), tile.y());
     }
 
     public int distanceTo(Locatable locatable) {
         return distanceTo(locatable.location());
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tile tile = (Tile) o;
+        return baseX == tile.baseX &&
+                baseY == tile.baseY &&
+                localX == tile.localX &&
+                localY == tile.localY &&
+                floor == tile.floor;
+    }
+
+    @Override
     public int hashCode() {
-        int result = x;
-        result = 31 * result + y;
-        result = 31 * result + floor;
-        return result;
+        return Objects.hash(baseX, baseY, localX, localY, floor);
     }
 
     public String toString() {
-        return "(" + x + ", " + y + ", " + floor + ")";
+        return "(" + x() + ", " + y() + ", " + floor + ")";
     }
 }
