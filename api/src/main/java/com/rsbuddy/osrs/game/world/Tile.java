@@ -131,23 +131,23 @@ public class Tile implements Locatable {
                     break;
                 }
                 case 4: {
-                    resolvedTile = new Tile(lx, ly + 1, resolvedTile.floor);
+                    resolvedTile = new Tile(bx, by, lx, ly + 1, resolvedTile.floor);
                     break;
                 }
                 case 5: {
-                    resolvedTile = new Tile(lx + 1, ly + 1, resolvedTile.floor);
+                    resolvedTile = new Tile(bx, by, lx + 1, ly + 1, resolvedTile.floor);
                     break;
                 }
                 case 6: {
-                    resolvedTile = new Tile(lx + 1, ly, resolvedTile.floor);
+                    resolvedTile = new Tile(bx, by, lx + 1, ly, resolvedTile.floor);
                     break;
                 }
                 case 7: {
-                    resolvedTile = new Tile(lx + 1, ly - 1, resolvedTile.floor);
+                    resolvedTile = new Tile(bx, by, lx + 1, ly - 1, resolvedTile.floor);
                     break;
                 }
                 case 8: {
-                    resolvedTile = new Tile(lx, ly - 1, resolvedTile.floor);
+                    resolvedTile = new Tile(bx, by, lx, ly - 1, resolvedTile.floor);
                     break;
                 }
             }
