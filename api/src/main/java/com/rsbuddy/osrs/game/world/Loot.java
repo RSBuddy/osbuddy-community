@@ -83,6 +83,22 @@ public class Loot {
         return rewardPotential;
     }
 
+    @Override
+    public String toString() {
+        return "Loot{" +
+                "source=" + source +
+                ", location=" + location +
+                ", items=" + items +
+                ", time=" + time +
+                ", npcId=" + npcId +
+                ", npcName='" + npcName + '\'' +
+                ", playerName='" + playerName + '\'' +
+                ", killTime=" + killTime +
+                ", killCount=" + killCount +
+                ", rewardPotential=" + rewardPotential +
+                '}';
+    }
+
     public enum Source {
         NPC,
         BOSS,
