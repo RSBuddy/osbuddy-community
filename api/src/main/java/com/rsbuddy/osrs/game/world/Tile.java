@@ -174,11 +174,9 @@ public class Tile implements Locatable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Tile tile = (Tile) o;
-        return baseX == tile.baseX &&
-                baseY == tile.baseY &&
-                localX == tile.localX &&
-                localY == tile.localY &&
-                floor == tile.floor;
+        return x() == tile.x() &&
+               y() == tile.y() &&
+               floor == tile.floor;
     }
 
     @Override
