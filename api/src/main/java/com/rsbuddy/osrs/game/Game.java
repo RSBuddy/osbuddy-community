@@ -263,11 +263,11 @@ public interface Game extends Executor {
 
     String chatboxMessage();
 
-    void addChatMessage(final int type, final String sender, final String message);
+    int addChatMessage(final int type, final String sender, final String message);
 
-    void addChatMessage(final int type, final String sender, final String message, final String prefix);
+    int addChatMessage(final int type, final String sender, final String message, final String prefix);
 
-    void addSystemMessage(final String message);
+    int addSystemMessage(final String message);
 
     Tile flag();
 

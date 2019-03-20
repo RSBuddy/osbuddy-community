@@ -36,6 +36,7 @@ import com.rsbuddy.osrs.event.inventory.InventoryUpdated;
 import com.rsbuddy.osrs.event.inventory.ItemHovered;
 import com.rsbuddy.osrs.event.world.GroundItemRemoved;
 import com.rsbuddy.osrs.event.world.GroundItemUpdated;
+import com.rsbuddy.osrs.game.chat.ClanChatUser;
 import com.rsbuddy.osrs.game.world.*;
 //import com.rsbuddy.osrs.event.world.*;
 
@@ -72,6 +73,8 @@ public enum GameEvent {
     INVENTORY_UPDATED(InventoryUpdated.class),
     BACKPACK_CHANGED(BackpackChanged.class),
     ITEM_HOVERED(ItemHovered.class),
+    CLAN_CHAT_USER_CONNECTED(ClanChatUser.class),
+    CLAN_CHAT_USER_DISCONNECTED(ClanChatUser.class),
     ;
 
     private final boolean loginCheck;
