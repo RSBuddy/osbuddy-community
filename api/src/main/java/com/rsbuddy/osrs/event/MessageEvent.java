@@ -50,7 +50,8 @@ public class MessageEvent {
     public static final int DUEL_REQUEST_RECEIVED = 103;
     public static final int DUEL_REQUEST_SENT = 102;
 
-    public static final int FILTERABLE_CHAT = 105; // presumably
+    public static final int FILTERABLE_CHAT = 105;
+    public static final int WELCOME = 108;
 
     private String sender;
     private String screenName;
