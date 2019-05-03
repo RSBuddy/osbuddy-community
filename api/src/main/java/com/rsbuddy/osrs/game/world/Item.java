@@ -32,7 +32,7 @@ public class Item {
     }
 
     public int value() {
-        return stack * price;
+        return stack() * price();
     }
 
     @Override
