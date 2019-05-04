@@ -65,4 +65,6 @@ public interface Inventory {
 
     boolean full();
 
+    boolean open();
+
 }
