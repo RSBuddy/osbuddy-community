@@ -53,6 +53,7 @@ public enum GameEvent {
     NPC_DESPAWNED(Npc.class),
     PLAYER_SPAWNED(Player.class),
     PLAYER_DESPAWNED(Player.class),
+    PLAYER_ANIMATED(AnimatePlayer.class),
     LOOT_RECEIVED(Loot.class),
     LOCATION_CREATED(Location.class),
     LOCATION_REMOVED(Location.class),
