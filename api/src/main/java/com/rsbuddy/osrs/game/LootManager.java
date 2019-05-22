@@ -13,4 +13,6 @@ public interface LootManager {
 
     void submitLoot(Loot loot);
 
+    void clearLoot();
+
 }

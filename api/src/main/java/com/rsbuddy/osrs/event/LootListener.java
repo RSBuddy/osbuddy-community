@@ -10,4 +10,6 @@ public interface LootListener {
 
     default void addLoot(List<Loot> events) {}
 
+    default void clearLoot() {}
+
 }
