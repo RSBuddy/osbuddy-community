@@ -54,6 +54,7 @@ public enum GameEvent {
     PLAYER_SPAWNED(Player.class),
     PLAYER_DESPAWNED(Player.class),
     PLAYER_ANIMATED(AnimatePlayer.class),
+    PLAYER_OVERHEAD_TEXT_UPDATED(PlayerOverheadTextUpdated.class),
     LOOT_RECEIVED(Loot.class),
     LOCATION_CREATED(Location.class),
     LOCATION_REMOVED(Location.class),
