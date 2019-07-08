@@ -32,36 +32,38 @@ package com.rsbuddy.osrs.content.config;
 
 public enum Skill {
 
-    ATTACK("Attack", 0),
-    DEFENCE("Defence", 1),
-    STRENGTH("Strength", 2),
-    HITPOINTS("Hitpoints", 3),
-    RANGED("Ranged", 4),
-    PRAYER("Prayer", 5),
-    MAGIC("Magic", 6),
-    COOKING("Cooking", 7),
-    WOODCUTTING("Woodcutting", 8),
-    FLETCHING("Fletching", 9),
-    FISHING("Fishing", 10),
-    FIREMAKING("Firemaking", 11),
-    CRAFTING("Crafting", 12),
-    SMITHING("Smithing", 13),
-    MINING("Mining", 14),
-    HERBLORE("Herblore", 15),
-    AGILITY("Agility", 16),
-    THIEVING("Thieving", 17),
-    SLAYER("Slayer", 18),
-    FARMING("Farming", 19),
-    RUNECRAFTING("Runecrafting", 20),
-    HUNTER("Hunter", 21),
-    CONSTRUCTION("Construction", 22);
+    ATTACK("Attack", 0, 1),
+    DEFENCE("Defence", 1, 3),
+    STRENGTH("Strength", 2, 2),
+    HITPOINTS("Hitpoints", 3, 9),
+    RANGED("Ranged", 4, 4),
+    PRAYER("Prayer", 5, 5),
+    MAGIC("Magic", 6, 6),
+    COOKING("Cooking", 7, 20),
+    WOODCUTTING("Woodcutting", 8, 22),
+    FLETCHING("Fletching", 9, 14),
+    FISHING("Fishing", 10, 19),
+    FIREMAKING("Firemaking", 11, 21),
+    CRAFTING("Crafting", 12, 13),
+    SMITHING("Smithing", 13, 18),
+    MINING("Mining", 14, 17),
+    HERBLORE("Herblore", 15, 11),
+    AGILITY("Agility", 16, 10),
+    THIEVING("Thieving", 17, 12),
+    SLAYER("Slayer", 18, 15),
+    FARMING("Farming", 19, 23),
+    RUNECRAFTING("Runecrafting", 20, 7),
+    HUNTER("Hunter", 21, 16),
+    CONSTRUCTION("Construction", 22, 8);
 
     private final String name;
     private final int index;
+    private final int widgetId;
 
-    Skill(String name, int index) {
+    Skill(String name, int index, int widgetId) {
         this.name = name;
         this.index = index;
+        this.widgetId = widgetId;
     }
 
     public static Skill forName(String name) {
@@ -88,6 +90,10 @@ public enum Skill {
 
     public int index() {
         return index;
+    }
+
+    public int widgetId() {
+        return widgetId;
     }
 
 }
