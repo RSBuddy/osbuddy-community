@@ -40,6 +40,7 @@ public class MessageEvent {
     public static final int PM_SENT = 6;
     public static final int PM_RECEIVE_MOD = 7;
     public static final int CLAN = 9;
+    public static final int FRIENDS_CHAT_NOTIFICATION = 11;
     public static final int NOTIFICATION = 14;
     public static final int EXAMINE = 27;
     public static final int AUTOCHAT = 90;
