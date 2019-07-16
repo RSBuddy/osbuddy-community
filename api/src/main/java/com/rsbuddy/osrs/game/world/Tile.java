@@ -181,7 +181,7 @@ public class Tile implements Locatable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(baseX, baseY, localX, localY, floor);
+        return Objects.hash(x(), y(), floor);
     }
 
     public String toString() {
