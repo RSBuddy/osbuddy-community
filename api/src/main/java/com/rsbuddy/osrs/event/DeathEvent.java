@@ -30,17 +30,24 @@
 
 package com.rsbuddy.osrs.event;
 
+import com.google.gson.annotations.SerializedName;
 import com.rsbuddy.osrs.game.world.Tile;
 
 public class DeathEvent {
-    private final int world;
-    private final Tile location;
-    private final long time;
+    @SerializedName("world")
+    private int world;
+    @SerializedName("location")
+    private Tile location;
+    @SerializedName("time")
+    private long time;
 
     public DeathEvent(int world, Tile location, long time) {
         this.world = world;
         this.location = location;
         this.time = time;
+    }
+
+    public DeathEvent() {
     }
 
     public int world() {
