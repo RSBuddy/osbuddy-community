@@ -77,7 +77,8 @@ public enum GameEvent {
     ITEM_HOVERED(ItemHovered.class),
     CLAN_CHAT_USER_CONNECTED(ClanChatUser.class),
     CLAN_CHAT_USER_DISCONNECTED(ClanChatUser.class),
-    DEATH(DeathEvent.class)
+    DEATH(DeathEvent.class),
+    QUEST_LIST_UPDATED
     ;
 
     private final boolean loginCheck;
