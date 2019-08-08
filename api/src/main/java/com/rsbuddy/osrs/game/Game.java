@@ -210,6 +210,13 @@ public interface Game extends Executor {
      */
     Inventories inventories();
 
+    /**
+     * An object to access map animations that are cached by the game client.
+     *
+     * @return  An object to access map animations.
+     */
+    MapAnims mapAnims();
+
     GameState state();
 
     boolean inGame();
