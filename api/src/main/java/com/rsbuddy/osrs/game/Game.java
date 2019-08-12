@@ -313,4 +313,8 @@ public interface Game extends Executor {
      */
     AccountType accountType();
 
+    default Tile mapBase() {
+        return new Tile(baseX(), baseY(), floor());
+    }
+
 }
