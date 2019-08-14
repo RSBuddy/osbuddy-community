@@ -45,11 +45,11 @@ public interface Inventory {
 
     boolean containsOneOf(Collection<Integer> itemIds);
 
-    boolean indexOf(int itemId);
+    int indexOf(int itemId);
 
-    boolean indexOf(int... itemIds);
+    int indexOf(int... itemIds);
 
-    boolean indexOf(Collection<Integer> itemIds);
+    int indexOf(Collection<Integer> itemIds);
 
     Set<Integer> intersection(Collection<Integer> ids);
 
