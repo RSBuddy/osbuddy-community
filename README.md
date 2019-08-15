@@ -10,7 +10,7 @@ An example plugin is provided which shows other typical dependencies, which are 
 ## Creating a plugin
 Make sure you have run OSBuddy so that you have an OSBuddy folder in your user directory. This will contain loader.jar, which you will need to your plugin project's class path so that you can run your plugin.
 
-On Linux or macOS run this command to download it. ```curl --create-dirs -o ~/OSBuddy/loader.jar http://cdn.rsbuddy.com/live/f/loader/OSBuddy.jar```
+On Linux or macOS run this command to download it. ```curl -L --create-dirs -o ~/OSBuddy/loader.jar http://cdn.rsbuddy.com/live/f/loader/OSBuddy.jar```
 
 To run your plugin (we recommend launching in Debug mode), launch the main class com.osbuddy.loader.Loader with the following VM arguments:
 ```
@@ -18,16 +18,16 @@ To run your plugin (we recommend launching in Debug mode), launch the main class
 -Dplugin-resources=$PROJECT_DIR$/plugins/example/out/production/resources
 -Dnofork=true
 -Ddev=true
+-Dlog.level=all
 -Xmx512m
 ```
 
-Loader.xml has this configuration for Intellij. Copy it to the .idea/runConfigurations/ folder and restart Intellij.
+Loader.xml has the above configuration for Intellij. Copy it to the .idea/runConfigurations/ folder and restart Intellij.
 ```
 mkdir .idea/runConfigurations/
 cp Loader.xml .idea/runConfigurations/
 ```
 
-For program arguments use ```-vvv``` to set the slf4j logging level to ALL.
 
 Select use classpath of module: com.rsbuddy.osrs.example.main
 
