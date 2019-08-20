@@ -112,5 +112,7 @@ public interface Actor extends Renderable, Locatable, ModelProvider {
 
     int graphic();
 
+    int idlePose();
+
     int pose();
 }
