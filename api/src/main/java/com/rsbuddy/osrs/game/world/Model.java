@@ -30,15 +30,15 @@
 
 package com.rsbuddy.osrs.game.world;
 
-import java.awt.Graphics2D;
-import java.awt.Point;
-import java.awt.Polygon;
-import java.awt.Shape;
+import java.awt.*;
+import java.awt.geom.Area;
 
 public interface Model {
     Model snapshot();
 
     Polygon hull();
+
+    Area clickableArea();
 
     Point centroid();
 
