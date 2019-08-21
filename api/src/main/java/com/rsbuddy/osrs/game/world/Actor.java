@@ -114,5 +114,7 @@ public interface Actor extends Renderable, Locatable, ModelProvider {
 
     int idlePose();
 
+    void setIdlePoseAnimation(final int poseAnimationId);
+
     int pose();
 }
