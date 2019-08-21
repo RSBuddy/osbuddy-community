@@ -50,6 +50,8 @@ public interface Player extends Actor {
 
     void noAppearance();
 
+    void setTransmogNpcId(final int id);
+
     void lookupMaxHealth();
 
     int index();
