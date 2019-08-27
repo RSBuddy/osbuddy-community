@@ -1,0 +1,15 @@
+{
+  "class": "com.rsbuddy.osrs.plugins.PublishDuels",
+  "description": "Publish duels to Discord webhook",
+  "version": "1.0.0",
+  "developers": [],
+  "settings": [
+    {
+      "id": "webhookUrlString",
+      "displayName": "Webhook URL",
+      "description": "",
+      "type": "text-field",
+      "default": ""
+    }
+  ]
+}
