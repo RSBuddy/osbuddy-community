@@ -92,6 +92,10 @@ public interface AnimationId {
     int MAGIC_STRING_JEWELRY = 4412;
     int MAGIC_BAKE_PIE = 4413;
     int MAGIC_CREATE_TABLET = 4068;
+    int MAGIC_ENCHANT_JEWELRY = 931;
+    int MAGIC_ENCHANT_AMULET_1 = 719; // sapphire, opal, diamond
+    int MAGIC_ENCHANT_AMULET_2 = 720; // emerald, jade, dragonstone
+    int MAGIC_ENCHANT_AMULET_3 = 721; // ruby, topaz, onyx, zenyte
 
     int MINING_NORMAL_BRONZE = 625;
     int MINING_NORMAL_IRON = 626;
@@ -125,6 +129,7 @@ public interface AnimationId {
 
     int PRAYER_OFFER_BONES = 3705;
 
+    int SMITHING_ANVIL = 898;
     int SMITHING_SMELTING = 899;
     int SMITHING_CANNONBALL = 827; // also animation for burying bones
 
