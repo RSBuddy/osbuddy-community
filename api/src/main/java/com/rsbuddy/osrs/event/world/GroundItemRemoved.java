@@ -39,10 +39,12 @@ public class GroundItemRemoved {
     public final int x;
     public final int y;
     public final int floor;
+    public final boolean emptyTile;
 
-    public GroundItemRemoved(final int x, final int y, final int floor) {
+    public GroundItemRemoved(final int x, final int y, final int floor, final boolean emptyTile) {
         this.x = x;
         this.y = y;
         this.floor = floor;
+        this.emptyTile = emptyTile;
     }
 }
