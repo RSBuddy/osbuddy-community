@@ -51,6 +51,8 @@ public interface Inventory {
 
     int indexOf(Collection<Integer> itemIds);
 
+    int lastIndexOf(Collection<Integer> itemIds);
+
     Set<Integer> intersection(Collection<Integer> ids);
 
     Set<Integer> intersection(int... ids);
