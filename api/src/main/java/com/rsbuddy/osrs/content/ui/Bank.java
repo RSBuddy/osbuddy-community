@@ -61,6 +61,9 @@ public class Bank {
     public static final int CLOSE_COMPONENT = 3;
     // the component that contains the tabs as children
     public static final int TABS_COMPONENT = 10;
+    // the component that is directly below (the bottom-border) the tab components, as of 1/9/2020 it
+    // resides within the TABS_COMPONENT group.
+    public static final int TABS_COMPONENT_BOTTOM_BORDER = 11;
     // the component that contains ALL of the items as children
     public static final int INVENTORY_COMPONENT = 12;
     // the component that encompasses the entire scroll bar (buttons, track, thumb)
