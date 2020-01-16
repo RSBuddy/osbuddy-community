@@ -56,25 +56,25 @@ public class Bank {
     // the 1st container, it is the exact size of the bank, slightly smaller than root
     public static final int CONTAINER_COMPONENT = 1;
     // the 2nd container, it is the exact size as the component above it
-    public static final int CONTAINER_INNER = 2;
+    // public static final int CONTAINER_INNER = 2; removed?
     // this is a groupped component... contains a lot of other stuff, but the close button is the last child
-    public static final int CLOSE_COMPONENT = 3;
+    public static final int CLOSE_COMPONENT = 2;
     // the component that contains the tabs as children
-    public static final int TABS_COMPONENT = 10;
+    public static final int TABS_COMPONENT = 9;
     // the component that is directly below (the bottom-border) the tab components, as of 1/9/2020 it
     // resides within the TABS_COMPONENT group.
-    public static final int TABS_COMPONENT_BOTTOM_BORDER = 11;
+    public static final int TABS_COMPONENT_BOTTOM_BORDER = 10;
     // the component that contains ALL of the items as children
-    public static final int INVENTORY_COMPONENT = 12;
+    public static final int INVENTORY_COMPONENT = 11;
     // the component that encompasses the entire scroll bar (buttons, track, thumb)
-    public static final int SCROLL_BAR_PARENT = 13;
-    public static final int CONTROLS_COMPONENT = 14;
-    public static final int SEARCH_BUTTON_COMPONENT = 39;
-    public static final int INCINERATOR_COMPONENT = 45; // enable via the bank settings
-    public static final int ITEM_COUNT_COMPONENT = 5;
-    public static final int TITLE_COMPONENT = 4;
+    public static final int SCROLL_BAR_PARENT = 12;
+    public static final int CONTROLS_COMPONENT = 13;
+    public static final int SEARCH_BUTTON_COMPONENT = 38;
+    public static final int INCINERATOR_COMPONENT = 44; // enable via the bank settings
+    public static final int ITEM_COUNT_COMPONENT = 4;
+    public static final int TITLE_COMPONENT = 3;
     // the component that encompasses the entire settings view (hidden when bank is open until u click settings).
-    public static final int SETTINGS_COMPONENT = 48;
+    public static final int SETTINGS_COMPONENT = 47;
     public static final int TAB_SEPARATOR_CHILD = 800;
     public static final int TAB_SEPARATOR_COUNT = 9;
 
