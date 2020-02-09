@@ -42,6 +42,8 @@ public interface Model {
 
     Point centroid();
 
+    Area aabb();
+
     Point centroidOffsetHeight(final int height);
 
     Shape centroid(int size);
