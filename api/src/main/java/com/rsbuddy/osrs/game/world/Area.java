@@ -30,6 +30,8 @@
 
 package com.rsbuddy.osrs.game.world;
 
+import java.util.Objects;
+
 /**
  * Represents an area within the RuneScape game.
  *
@@ -109,4 +111,19 @@ public final class Area {
         return x + " " + y + " " + width + " " + height;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Area area = (Area) o;
+        return x == area.x &&
+                y == area.y &&
+                width == area.width &&
+                height == area.height;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y, width, height);
+    }
 }
