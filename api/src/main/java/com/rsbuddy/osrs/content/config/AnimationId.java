@@ -52,6 +52,8 @@ public interface AnimationId {
     int CRAFTING_SPINNING = 894;
     int CRAFTING_LEATHER = 1249;
 
+    int FEED_BURNING_BRAZIER = 832;
+
     int FIREMAKING_LIGHT_LOG = 733;
 
     int FISHING_BARBARIAN = 6709;
@@ -144,5 +146,6 @@ public interface AnimationId {
     int WOODCUTTING_INFERNAL = 2117;
     int WOODCUTTING_3A = 7264;
     int WOODCUTTING_CRYSTAL = 8324;
+
 
 }
