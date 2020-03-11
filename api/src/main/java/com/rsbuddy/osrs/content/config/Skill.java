@@ -30,6 +30,11 @@
 
 package com.rsbuddy.osrs.content.config;
 
+import com.google.common.collect.Maps;
+
+import java.util.Arrays;
+import java.util.Map;
+
 public enum Skill {
 
     ATTACK("Attack", 0, 1),
@@ -66,22 +71,28 @@ public enum Skill {
         this.widgetId = widgetId;
     }
 
-    public static Skill forName(String name) {
-        for (Skill skill : values()) {
-            if (skill.name.equalsIgnoreCase(name)) {
-                return skill;
-            }
-        }
-        return null;
+    private static final Map<Integer, Skill> SKILL_BY_WIDGET_ID = Maps.newHashMap();
+    private static final Map<Integer, Skill> SKILL_BY_INDEX = Maps.newHashMap();
+    private static final Map<String, Skill> SKILL_BY_NAME = Maps.newHashMap();
+
+    static {
+        Arrays.stream(values()).forEach(skill -> {
+            SKILL_BY_WIDGET_ID.put(skill.widgetId, skill);
+            SKILL_BY_INDEX.put(skill.index, skill);
+            SKILL_BY_NAME.put(skill.name, skill);
+        });
     }
 
-    public static Skill forIndex(int index) {
-        for (Skill skill : values()) {
-            if (skill.index == index) {
-                return skill;
-            }
-        }
-        return null;
+    public static Skill forName(final String name) {
+        return SKILL_BY_NAME.get(name);
+    }
+
+    public static Skill forIndex(final int index) {
+        return SKILL_BY_INDEX.get(index);
+    }
+
+    public static Skill forWidgetId(final int widgetId) {
+        return SKILL_BY_WIDGET_ID.get(widgetId);
     }
 
     public String skillName() {
