@@ -95,9 +95,31 @@ public interface Component {
      */
     int absoluteY();
 
+    /**
+     * Sets the relative x position of the child
+     *
+     */
     void setX(int x);
 
+    /**
+     * Sets the relative y position of the child
+     *
+     */
     void setY(int y);
+
+    /**
+     * Sets the absolute x position of the child.
+     * Parent(s) will be moved also if position relative to parent is negative
+     *
+     */
+    void setAbsoluteX(int x);
+
+    /**
+     * Sets the absolute y position of the child
+     * Parent(s) will be moved also if position relative to parent is negative
+     *
+     */
+    void setAbsoluteY(int y);
 
     int color();
 
