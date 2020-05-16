@@ -44,12 +44,14 @@ public class MessageEvent {
     public static final int NOTIFICATION = 14;
     public static final int EXAMINE = 27;
     public static final int AUTOCHAT = 90;
+    public static final int AUTOCHAT_MOD = 91;
 
     //Trade + Duel offer are meant to be the same value
     public static final int TRADE_REQUEST_RECEIVED = 101;
     public static final int TRADE_REQUEST_SENT = 102;
     public static final int DUEL_REQUEST_RECEIVED = 103;
     public static final int DUEL_REQUEST_SENT = 102;
+    public static final int CLAN_CHALLENGE_REQUEST_RECEIVED = 104;
 
     public static final int FILTERABLE_CHAT = 105;
     public static final int WELCOME = 108;
