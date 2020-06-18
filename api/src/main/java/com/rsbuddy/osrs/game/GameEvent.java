@@ -51,6 +51,7 @@ public enum GameEvent {
     GROUND_ITEM_REMOVED(GroundItemRemoved.class),
     NPC_SPAWNED(Npc.class),
     NPC_DESPAWNED(Npc.class),
+    NPC_HEALTHBAR_UPDATED(NpcHealthbarUpdated.class),
     PLAYER_SPAWNED(Player.class),
     PLAYER_DESPAWNED(Player.class),
     PLAYER_ANIMATED(AnimatePlayer.class),
