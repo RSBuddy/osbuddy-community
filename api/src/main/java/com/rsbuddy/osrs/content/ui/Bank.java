@@ -73,6 +73,9 @@ public class Bank {
     public static final int INCINERATOR_COMPONENT = 45; // enable via the bank settings
     public static final int ITEM_COUNT_COMPONENT = 5;
     public static final int TITLE_COMPONENT = 3;
+    public static final int SETTINGS_BUTTON_COMPONENT = 111;
+    public static final int EQUIPMENT_BUTTON_COMPONENT = 112;
+    public static final int EQUIPMENT_BUTTON_SPRITE = 196;
     // the component that encompasses the entire settings view (hidden when bank is open until u click settings).
     public static final int SETTINGS_COMPONENT = 48;
     public static final int TAB_SEPARATOR_CHILD = 800;
