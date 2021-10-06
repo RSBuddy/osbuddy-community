@@ -76,6 +76,7 @@ public class Bank {
     public static final int SETTINGS_BUTTON_COMPONENT = 112;
     public static final int EQUIPMENT_BUTTON_COMPONENT = 113;
     public static final int EQUIPMENT_BUTTON_SPRITE = 195;
+    public static final int EQUIPMENT_BUTTON_SELECTED_SPRITE = 196;
     // the component that encompasses the entire settings view (hidden when bank is open until u click settings).
     public static final int SETTINGS_COMPONENT = 49;
     public static final int TAB_SEPARATOR_CHILD = 800;
