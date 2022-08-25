@@ -1,7 +1,7 @@
 package com.rsbuddy.osrs.game;
 
 public interface MenuSortListener {
-    void sort(int count, int[] actionParams0, int[] actionParams1, int[] typeIds, int[] targetIds, String[] actions, String[] options, boolean[] forceActions);
+    void sort(int count, int[] actionParams0, int[] actionParams1, int[] typeIds, int[] targetIds, int[] itemIds, String[] actions, String[] options, boolean[] forceActions);
 
 
     /**
